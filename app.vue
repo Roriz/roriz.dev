@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <main class="main-content" :class="{ opened: isOpened }">
     <aside class="sidebar">
       <nav>
         <ul>
@@ -10,45 +10,64 @@
       </nav>
     </aside>
 
-    <main class="main-content">
-      <section class="profile">
-        <div class="avatar">
-          <img src="assets/me.jpg" alt="Avatar">
-        </div>
-        <h1>Radamés Roriz</h1>
-        <p>Software builder</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a>
-          <a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a>
-        </div>
-      </section>
-    </main>
+    <section class="profile">
+      <div class="avatar">
+        <img src="assets/me.jpg" alt="Avatar">
+      </div>
+      <h1>Radamés Roriz</h1>
+      <p>Software builder</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a>
+        <a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a>
+      </div>
+    </section>
+  </main>
 
-    <NuxtPage />
-  </div>
+  <NuxtPage />
+
+  <button class="custom-fab" @click="isOpened = !isOpened">
+    <i class="fa fa-bars"></i>
+  </button>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './assets/main.css';
+
+const isOpened = ref(false);
 </script>
 
 <style>
-.container {
-  display: flex;
+.main-content {
+  display: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  flex-direction: column-reverse;
+  align-items: flex-start;
   min-height: 100vh;
+  background-color: var(--bg-tertiary);
+}
+.main-content.opened {
+  display: flex;
 }
 
-/* Sidebar */
 .sidebar {
-  min-width: 200px;
+  min-width: 300px;
   max-width: 15vw;
-  background-color: var(--bg-secondary);
+  background-color: var(--bg-tertiary);
   padding: calc(var(--spacing) * 3);
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: auto;
+}
+.sidebar nav {
+  width: 100%;
 }
 
 .sidebar nav ul {
@@ -59,14 +78,18 @@ import './assets/main.css';
   text-decoration: none;
   color: var(--tx-secondary);
   padding: calc(var(--spacing) * 2) 0;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
 .sidebar nav ul li a.router-link-active {
   color: var(--tx-accent);
 }
+.sidebar nav ul li a svg {
+  margin-right: calc(var(--spacing) * 2);
+}
 
-.main-content {
+.profile {
   min-width: 300px;
   max-width: 15vw;
   background-color: var(--bg-tertiary);
@@ -117,4 +140,55 @@ import './assets/main.css';
   font-size: calc(var(--fz) * 1.5);
 }
 
+.custom-fab {
+  position: fixed;
+  bottom: calc(var(--spacing) * 3);
+  right: calc(var(--spacing) * 3);
+  padding: calc(var(--spacing) * 2);
+  background-color: var(--bg-accent);
+  color: var(--tx-primary);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  font-size: calc(var(--fz) * 1.5);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-fab:hover {
+  background-color: var(--bg-accent-hover);
+  color: var(--tx-accent-hover);
+}
+
+@media (min-width: 768px) {
+  .main-content {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+
+  .sidebar {
+    min-width: 200px;
+    max-width: 15vw;
+    background-color: var(--bg-secondary);
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 100vh;
+  }
+  .sidebar nav ul li a {
+    justify-content: flex-start;
+  }
+
+  .profile {
+    min-width: 300px;
+    max-width: 15vw;
+  }
+
+  .custom-fab {
+    display: none;
+  }
+}
 </style>
