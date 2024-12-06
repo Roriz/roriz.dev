@@ -1,0 +1,1 @@
+import{_ as e}from"./DlAUqK2U.js";import{c as t,a as s,o as c}from"./Diqcf0Jq.js";const r={},n={class:"intro"};function a(_,o){return c(),t("section",n,o[0]||(o[0]=[s("p",null," blog ",-1)]))}const f=e(r,[["render",a],["__scopeId","data-v-419bdc76"]]);export{f as default};
