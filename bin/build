@@ -1,0 +1,4 @@
+#!/bin/sh
+
+npm run generate
+cp -R .output/public docs/
