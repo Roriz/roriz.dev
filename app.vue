@@ -1,20 +1,15 @@
 <template>
   <div class="container">
-    <!-- Sidebar -->
     <aside class="sidebar">
       <nav>
         <ul>
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#">About Me</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li>
+          <li><NuxtLink to="/blog"><i class="fa fa-pencil-alt"></i> Blog</NuxtLink></li>
+          <li><NuxtLink to="/achievements"><i class="fa fa-trophy"></i> Achievements</NuxtLink></li>
         </ul>
       </nav>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
       <section class="profile">
         <div class="avatar">
@@ -23,17 +18,13 @@
         <h1>Radamés Roriz</h1>
         <p>Software builder</p>
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fas fa-linkedin"></i></a>
-          <a href="https://github.com/roriz"><i class="fas fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a>
+          <a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a>
         </div>
       </section>
     </main>
 
-    <section class="intro">
-      <p>
-        Technology holds the power to elevate humanity, reshaping lives for the better. To contribute to this transformation is not just a choice, it's my purpose
-      </p>
-    </section>
+    <NuxtPage />
   </div>
 </template>
 
@@ -51,7 +42,7 @@ import './assets/main.css';
 
 /* Sidebar */
 .sidebar {
-  min-width: 150px;
+  min-width: 200px;
   max-width: 15vw;
   background-color: var(--bg-secondary);
   padding: calc(var(--spacing) * 3);
@@ -64,25 +55,22 @@ import './assets/main.css';
   list-style: none;
 }
 
-.sidebar nav ul li {
-  margin: calc(var(--spacing) * 3) 0;
-}
-
 .sidebar nav ul li a {
   text-decoration: none;
   color: var(--tx-secondary);
+  padding: calc(var(--spacing) * 2) 0;
+  display: block;
 }
 
-.sidebar nav ul li a.active {
+.sidebar nav ul li a.router-link-active {
   color: var(--tx-accent);
 }
 
-/* Main Content */
 .main-content {
-  min-width: 250px;
+  min-width: 300px;
   max-width: 15vw;
   background-color: var(--bg-tertiary);
-  padding: calc(var(--spacing) * 5);
+  padding: calc(var(--spacing) * 3);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -110,6 +98,15 @@ import './assets/main.css';
 
 .social-links {
   margin-bottom: calc(var(--spacing) * 3);
+}
+
+.social-links a {
+  margin-right: calc(var(--spacing) * 2);
+  color: var(--tx-secondary);
+  font-size: calc(var(--fz) * 1.5);
+}
+.social-links a:hover {
+  color: var(--tx-accent);
 }
 
 .intro {
