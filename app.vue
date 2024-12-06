@@ -1,5 +1,5 @@
 <template>
-  <main class="main-content" :class="{ opened: isOpened }">
+  <main class="main-content" ref="mainContent" :class="{ opened: isOpened }">
     <aside class="sidebar">
       <nav>
         <ul>
@@ -23,7 +23,10 @@
     </section>
   </main>
 
-  <NuxtPage />
+  <transition name="fade" mode="out-in">
+    <NuxtPage />
+  </transition>
+
 
   <button class="custom-fab" @click="isOpened = !isOpened">
     <i class="fa fa-bars"></i>
@@ -36,29 +39,43 @@ import { ref } from 'vue';
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './assets/main.css';
+import { onClickOutside  } from '@vueuse/core'
 
 const isOpened = ref(false);
+const mainContent = ref(null)
+
+const router = useRouter();
+router.afterEach(() => {
+  isOpened.value = false;
+});
+onClickOutside(mainContent, () => {
+  isOpened.value = false
+})
 </script>
 
 <style>
 .main-content {
-  display: none;
   position: fixed;
   right: 0;
   top: 0;
+  display: flex;
   flex-direction: column-reverse;
   align-items: flex-start;
   min-height: 100vh;
   background-color: var(--bg-tertiary);
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  transform: translateX(100%);
+  opacity: 0;
+  z-index: 1;
 }
 .main-content.opened {
-  display: flex;
+  transform: translateX(0);
+  opacity: 1;
 }
 
 .sidebar {
   min-width: 300px;
   max-width: 15vw;
-  background-color: var(--bg-tertiary);
   padding: calc(var(--spacing) * 3);
   display: flex;
   flex-direction: column;
@@ -92,7 +109,6 @@ const isOpened = ref(false);
 .profile {
   min-width: 300px;
   max-width: 15vw;
-  background-color: var(--bg-tertiary);
   padding: calc(var(--spacing) * 3);
   text-align: center;
   display: flex;
@@ -165,15 +181,15 @@ const isOpened = ref(false);
 
 @media (min-width: 768px) {
   .main-content {
-    display: flex;
     flex-direction: row;
     position: relative;
+    transform: none;
+    opacity: 1;
   }
 
   .sidebar {
     min-width: 200px;
     max-width: 15vw;
-    background-color: var(--bg-secondary);
     justify-content: space-between;
     align-items: flex-start;
     min-height: 100vh;
@@ -185,6 +201,8 @@ const isOpened = ref(false);
   .profile {
     min-width: 300px;
     max-width: 15vw;
+    min-height: 100vh;
+    background-color: var(--bg-secondary);
   }
 
   .custom-fab {

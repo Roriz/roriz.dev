@@ -2,7 +2,7 @@
 :root {
   --bg-primary: #202020;
   --bg-secondary: #2c2c2c;
-  --bg-tertiary: #333;
+  --bg-tertiary: #444;
   --bg-accent: #00bcd4;
   --bg-accent-hover: #008c9e;
   --tx-primary: #fff;
@@ -44,4 +44,11 @@ a {
 
 a:visted {
   color: var(--tx-accent);
+}
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+  opacity: 0;
 }
