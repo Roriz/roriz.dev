@@ -1,1 +1,0 @@
-import{_ as t}from"./DlAUqK2U.js";import{c as o,a as s,o as c}from"./Diqcf0Jq.js";const n={},a={class:"intro"};function r(_,e){return c(),o("section",a,e[0]||(e[0]=[s("p",null," achievements ",-1)]))}const d=t(n,[["render",r],["__scopeId","data-v-3972b719"]]);export{d as default};
