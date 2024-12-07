@@ -94,6 +94,7 @@ useHead({
   transform: translateX(100%);
   opacity: 0;
   z-index: 1;
+  background-color: var(--bg-tertiary);
 }
 .main-content.opened {
   transform: translateX(0);
@@ -225,6 +226,7 @@ useHead({
     justify-content: space-between;
     align-items: flex-start;
     min-height: 100vh;
+    background-color: var(--bg-primary);
   }
   .sidebar nav ul li a {
     justify-content: flex-start;
