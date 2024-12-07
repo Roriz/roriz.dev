@@ -51,6 +51,38 @@ router.afterEach(() => {
 onClickOutside(mainContent, () => {
   isOpened.value = false
 })
+
+useHead({
+  title: 'Radamés Roriz - Software builder',
+  meta: [
+    { name: 'description', content: 'Radamés Roriz - Software builder' },
+    { name: 'author', content: 'Radamés Roriz' },
+    { name: 'keywords', content: 'software, developer, engineer' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    { name: 'theme-color', content: '#000000' },
+    { name: 'application-name', content: 'Radamés Roriz' },
+    { name: 'robots', content: 'index, follow' },
+    { name: 'googlebot', content: 'index, follow' },
+    { name: 'google', content: 'nositelinkssearchbox' },
+    { name: 'google', content: 'notranslate' },
+    { name: 'google', content: 'nositelinkssearchbox' },
+    { name: 'google', content: 'max-snippet:-1' },
+    { name: 'google', content: 'max-image-preview:large' },
+    { name: 'google', content: 'max-video-preview:-1' },
+    { name: 'og:title', content: 'Radamés Roriz - Software builder' },
+    { name: 'og:description', content: 'Radamés Roriz - Software builder' },
+    { name: 'og:type', content: 'website' },
+    { name: 'og:url', content: 'https://roriz.dev' },
+    { name: 'og:image', content: 'https://roriz.dev/assets/me.jpg' },
+    { name: 'og:site_name', content: 'Radamés Roriz' },
+    { name: 'og:locale', content: 'en_US' },
+    { name: 'og:image:width', content: '1200' },
+  ],
+  bodyAttrs: {
+    class: 'test'
+  },
+  script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+})
 </script>
 
 <style>
