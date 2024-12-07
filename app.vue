@@ -77,11 +77,7 @@ useHead({
     { name: 'og:site_name', content: 'Radamés Roriz' },
     { name: 'og:locale', content: 'en_US' },
     { name: 'og:image:width', content: '1200' },
-  ],
-  bodyAttrs: {
-    class: 'test'
-  },
-  script: [ { innerHTML: 'console.log(\'Hello world\')' } ]
+  ]
 })
 </script>
 
@@ -94,7 +90,6 @@ useHead({
   flex-direction: column-reverse;
   align-items: flex-start;
   min-height: 100vh;
-  background-color: var(--bg-tertiary);
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
   transform: translateX(100%);
   opacity: 0;
@@ -107,8 +102,7 @@ useHead({
 
 .sidebar {
   min-width: 300px;
-  max-width: 15vw;
-  padding: calc(var(--spacing) * 3);
+  max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,32 +120,37 @@ useHead({
 .sidebar nav ul li a {
   text-decoration: none;
   color: var(--tx-secondary);
-  padding: calc(var(--spacing) * 2) 0;
+  padding: calc(var(--spacing) * 3);
   display: flex;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--bg-tertiary);
+  font-size: calc(var(--fz) * .6);
+  text-transform: uppercase;
 }
 
 .sidebar nav ul li a.router-link-active {
   color: var(--tx-accent);
 }
 .sidebar nav ul li a svg {
-  margin-right: calc(var(--spacing) * 2);
+  font-size: calc(var(--fz) * 1.5);
+  margin-bottom: calc(var(--spacing) * 1);
 }
 
 .profile {
   min-width: 300px;
-  max-width: 15vw;
+  max-width: 300px;
   padding: calc(var(--spacing) * 3);
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 .avatar img {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   border: 2px solid var(--bg-accent);
   margin-bottom: calc(var(--spacing) * 3);
@@ -220,8 +219,8 @@ useHead({
   }
 
   .sidebar {
-    min-width: 200px;
-    max-width: 15vw;
+    min-width: 100px;
+    max-width: 100px;
     justify-content: space-between;
     align-items: flex-start;
     min-height: 100vh;
@@ -234,7 +233,7 @@ useHead({
     min-width: 300px;
     max-width: 15vw;
     min-height: 100vh;
-    background-color: var(--bg-secondary);
+    background-color: var(--bg-tertiary);
   }
 
   .custom-fab {
