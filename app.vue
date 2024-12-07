@@ -164,6 +164,7 @@ useHead({
 .profile p {
   margin-bottom: calc(var(--spacing) * 3);
   color: var(--tx-secondary);
+  font-size: calc(var(--fz) * 1.2);
 }
 
 .social-links {
@@ -172,7 +173,7 @@ useHead({
 
 .social-links a {
   margin-right: calc(var(--spacing) * 2);
-  color: var(--tx-secondary);
+  color: var(--tx-primary);
   font-size: calc(var(--fz) * 1.5);
 }
 .social-links a:hover {
