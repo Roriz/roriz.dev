@@ -1,11 +1,11 @@
 <template>
   <section class="intro">
-    <p>
+    <h2>
       I believe <b>technology</b> improves lives,<br/>
       and being part of that change is essential to <b>me</b>.
-    </p>
+    </h2>
     <br/>
-    <NuxtLink to="/blog"><i class="fa fa-pencil-alt"></i> See my opinions</NuxtLink>
+    <NuxtLink to="/posts"><i class="fa fa-pencil-alt"></i> See my opinions</NuxtLink>
   </section>
 </template>
 

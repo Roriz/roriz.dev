@@ -1,36 +1,39 @@
 <template>
-  <main class="main-content" ref="mainContent" :class="{ opened: isOpened }">
-    <aside class="sidebar">
-      <nav>
-        <ul>
-          <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li>
-          <li><NuxtLink to="/blog"><i class="fa fa-pencil-alt"></i> Blog</NuxtLink></li>
-          <li><NuxtLink to="/achievements"><i class="fa fa-trophy"></i> Achievements</NuxtLink></li>
-        </ul>
-      </nav>
-    </aside>
-
-    <section class="profile">
-      <div class="avatar">
-        <img src="assets/me.jpg" alt="Avatar">
-      </div>
-      <h1>Radamés Roriz</h1>
-      <p>Software builder</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a>
-        <a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a>
+  <main id="app">
+    <section class="menu" ref="mainContent" :class="{ opened: isOpened }">
+      <aside class="sidebar">
+        <nav>
+          <ul>
+            <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li>
+            <li><NuxtLink to="/posts"><i class="fa fa-pencil-alt"></i> Blog</NuxtLink></li>
+            <li><NuxtLink to="/achievements"><i class="fa fa-trophy"></i> Achievements</NuxtLink></li>
+          </ul>
+        </nav>
+      </aside>
+  
+      <div class="profile">
+        <div class="avatar">
+          <img src="assets/radames_roriz.jpg" alt="Avatar">
+        </div>
+        <h1>Radamés Roriz</h1>
+        <p>Software builder</p>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a>
+          <a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a>
+        </div>
       </div>
     </section>
+  
+    <section class="content">
+      <transition name="fade" mode="out-in">
+        <NuxtPage />
+      </transition>
+    </section>
+  
+    <button class="custom-fab" @click="isOpened = !isOpened">
+      <i class="fa fa-bars"></i>
+    </button>
   </main>
-
-  <transition name="fade" mode="out-in">
-    <NuxtPage />
-  </transition>
-
-
-  <button class="custom-fab" @click="isOpened = !isOpened">
-    <i class="fa fa-bars"></i>
-  </button>
 </template>
 
 <script setup>
@@ -73,7 +76,7 @@ useHead({
     { name: 'og:description', content: 'Radamés Roriz - Software builder' },
     { name: 'og:type', content: 'website' },
     { name: 'og:url', content: 'https://roriz.dev' },
-    { name: 'og:image', content: 'https://roriz.dev/assets/me.jpg' },
+    { name: 'og:image', content: 'https://roriz.dev/assets/radames_roriz.jpg' },
     { name: 'og:site_name', content: 'Radamés Roriz' },
     { name: 'og:locale', content: 'en_US' },
     { name: 'og:image:width', content: '1200' },
@@ -82,7 +85,16 @@ useHead({
 </script>
 
 <style>
-.main-content {
+#app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.menu {
   position: fixed;
   right: 0;
   top: 0;
@@ -96,7 +108,7 @@ useHead({
   z-index: 1;
   background-color: var(--bg-tertiary);
 }
-.main-content.opened {
+.menu.opened {
   transform: translateX(0);
   opacity: 1;
 }
@@ -127,7 +139,7 @@ useHead({
   justify-content: center;
   flex-direction: column;
   border-bottom: 1px solid var(--bg-tertiary);
-  font-size: calc(var(--fz) * .6);
+  font-size: 0.6rem;
   text-transform: uppercase;
 }
 
@@ -135,7 +147,7 @@ useHead({
   color: var(--tx-accent);
 }
 .sidebar nav ul li a svg {
-  font-size: calc(var(--fz) * 1.5);
+  font-size: 1.5rem;
   margin-bottom: calc(var(--spacing) * 1);
 }
 
@@ -158,14 +170,14 @@ useHead({
 }
 
 .profile h1 {
-  font-size: calc(var(--fz) * 2);
+  font-size: 2rem;
   margin-bottom: calc(var(--spacing) * 2);
 }
 
 .profile p {
   margin-bottom: calc(var(--spacing) * 3);
   color: var(--tx-secondary);
-  font-size: calc(var(--fz) * 1.2);
+  font-size: 1.2rem;
 }
 
 .social-links {
@@ -175,7 +187,7 @@ useHead({
 .social-links a {
   margin-right: calc(var(--spacing) * 2);
   color: var(--tx-primary);
-  font-size: calc(var(--fz) * 1.5);
+  font-size: 1.5rem;
 }
 .social-links a:hover {
   color: var(--tx-accent);
@@ -186,7 +198,7 @@ useHead({
   text-align: center;
   color: var(--tx-secondary);
   margin: auto;
-  font-size: calc(var(--fz) * 1.5);
+  font-size: 1.5rem;
 }
 
 .custom-fab {
@@ -203,7 +215,7 @@ useHead({
   justify-content: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
-  font-size: calc(var(--fz) * 1.5);
+  font-size: 1.5rem;
   transition: background-color 0.3s, color 0.3s;
 }
 
@@ -213,7 +225,7 @@ useHead({
 }
 
 @media (min-width: 768px) {
-  .main-content {
+  .menu {
     flex-direction: row;
     position: relative;
     transform: none;
@@ -242,5 +254,11 @@ useHead({
   .custom-fab {
     display: none;
   }
+}
+
+.content {
+  padding: calc(var(--spacing) * 4);
+  width: 100%;
+  min-height: 100vh;
 }
 </style>
