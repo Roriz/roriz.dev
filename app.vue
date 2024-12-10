@@ -6,7 +6,7 @@
           <ul>
             <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li>
             <li><NuxtLink to="/posts"><i class="fa fa-pencil-alt"></i> Blog</NuxtLink></li>
-            <li><NuxtLink to="/achievements"><i class="fa fa-trophy"></i> Achievements</NuxtLink></li>
+            <li><NuxtLink to="/about"><i class="fa fa-user"></i> About</NuxtLink></li>
           </ul>
         </nav>
       </aside>
@@ -84,11 +84,11 @@ useHead({
 })
 </script>
 
-<style>
+<style scoped>
 #app {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
   width: 100%;
@@ -227,7 +227,7 @@ useHead({
 @media (min-width: 768px) {
   .menu {
     flex-direction: row;
-    position: relative;
+    position: sticky;
     transform: none;
     opacity: 1;
   }
