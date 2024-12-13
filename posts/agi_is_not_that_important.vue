@@ -1,10 +1,11 @@
 <template>
-  <section>
+  <section class="post">
     <h1>AGI is Not That Important</h1>
-  
-    <p>TLDR;</p>
-    <p>The market is overly focused on improving LLMs, like how many parameters they have, context size, or even achieving AGI. However, none of these advancements will define our future. The real transformation will come from the software surrounding the LLMs. This software will control, orchestrate, and apply the right business rules, driving meaningful change. Even if we achieve true AGI, its impact will likely be far less disruptive than the market anticipates.</p>
-    <p>Join me in exploring the future and discovering how software can leverage these powerful new tools we call LLMs.</p>
+    
+    <div class="tldr">
+      <p><strong>TLDR;</strong> market is overly focused on improving LLMs, like how many parameters they have, context size, or even achieving AGI. However, none of these advancements will define our future. The real transformation will come from the software surrounding the LLMs. This software will control, orchestrate, and apply the right business rules, driving meaningful change. Even if we achieve true AGI, its impact will likely be far less disruptive than the market anticipates.</p>
+      <p>Join me in exploring the future and discovering how software can leverage these powerful new tools we call LLMs.</p>
+    </div>
     
     <h2>LLM from behind</h2>
     <p>The major players in the AI field have begun discussing <strong>AGI</strong> and even predicting when it might arrive. However, we don’t even have a clear <strong>definition</strong> of AGI. How can we aim for a goal that isn’t properly defined?</p>
@@ -21,13 +22,13 @@
   
     <h2>Why AGI is Not the Future We Think</h2>
     <p>There are <strong>limits</strong> to what an LLM can do, even with AGI. To achieve real-world impact and be more effective, an LLM needs to operate within a <strong>business model</strong>. On its own, the LLM is just a number predictor that transforms these numbers into text, images, or audio. However, it doesn’t connect directly to banks, calendars, or other services.</p>
-    <p>The model isn’t just the <code>.bin</code> or <code>.h5</code> file downloaded from Hugging Face. It’s part of a larger platform that includes features like moderation, guardrails, function calls, structured outputs, and reasoning. These capabilities depend on the supporting code built around the model.</p>
-    <p>Even when LLMs can perform some external requests, we can’t rely on them alone. Function calls may suggest right actions, but even if they work flawlessly, they can’t handle all edge cases, failures, queues, rate limits, differing protocols, or unusual standards. These are just a few challenges tied to external requests.</p>
-    <p>In terms of architecture, LLMs can’t directly interact with databases, manage event queues, manipulate files, or establish connections. They are unaware of anything outside themselves. To bridge this gap and enable real integration, <strong>infrastructure</strong> and supporting code are essential.</p>
+    <p>The model isn’t just the <code>.bin</code> or <code>.h5</code> file downloaded from Hugging Face. It’s part of a larger platform that includes features like moderation, guardrails, function calls, structured outputs, and reasoning. These capabilities depend on the supporting <strong>software</strong> built around the model.</p>
+    <p>Even when LLMs can perform some external requests, <strong>we can’t rely</strong> on them alone. Function calls may suggest right actions, but even if they work flawlessly, they can’t handle all edge cases, failures, queues, rate limits, differing protocols, or unusual standards. These are just a few challenges tied to external requests.</p>
+    <p>In terms of architecture, LLMs can’t directly interact with databases, manage event queues, manipulate files, or establish connections. They are unaware of anything outside themselves. To bridge this gap and enable real integration, <strong>infrastructure</strong> and supporting software are essential.</p>
     <p>I can go on by a lot, but you understand my point here. An LLM by itself is limited to its <strong>trained data</strong> and prompts. However, with engineering, it can achieve what was previously impossible or prohibitively expensive.</p>
     <img src="assets/posts/agi_is_not_that_important-1.optimized.jpg" alt="The Meeseeks: Blue humanoid creatures that exist solely to fulfill one task and then cease to exist. They are incredibly effective but often hilariously overwhelmed when given overly complex or existentially difficult tasks." />
     <p><em>image 1 - The Meeseeks: Blue humanoid creatures that exist solely to fulfill one task and then cease to exist. They are incredibly effective but often hilariously overwhelmed when given overly complex or existentially difficult tasks.</em></p>
-    <p>The best use of AI is to mimic processes and human behavior, while the best use of software is to structure and create deterministic use cases. Neither replaces the other, but together they complement each other. When combined, they become powerful allies in solving complex problems.</p>
+    <p>The best use of AI is to mimic processes and human behavior, while the best use of software is to structure and create deterministic use cases. Neither replaces the other, but <strong>together</strong> they complement each other. When combined, they become powerful allies in solving complex problems.</p>
   
     <h2>The Role of Software in Scaling AI</h2>
   
@@ -35,13 +36,10 @@
     <img src="assets/posts/agi_is_not_that_important-2.optimized.jpg" alt="Iceberg of potential AI fields, starting with 1. foundation models, 2. prompt wrappers, 3. intelligent software, and 4. autonomous software." />
     <p><em>Image 2: Iceberg of potential AI fields, starting with 1. foundation models, 2. prompt wrappers, 3. intelligent software, and 4. autonomous software.</em></p>
     <p>As we go deeper into AI applications, the need for <strong>functionalities</strong>, consistency, integrations, and business rules becomes more evident. These are challenges that only <strong>software</strong> can fully address today.</p>
-    <p>If any of this resonates with you, feel free to connect with me on LinkedIn or reach out via email.</p>
   </section>
 </template>
 
 <script setup>
-import { useHead } from '@vueuse/head'
-
 const props = defineProps({
   post: {
     type: Object,
