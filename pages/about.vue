@@ -2,7 +2,7 @@
   <div class="about">
     <section class="profile">
       <div class="avatar">
-        <img src="assets/radames_roriz.jpg" alt="Avatar">
+        <img src="assets/radames_roriz.optimized.jpg" alt="Avatar">
       </div>
       <h1>Radamés Roriz</h1>
       <p>Software builder</p>

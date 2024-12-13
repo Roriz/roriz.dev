@@ -1,11 +1,12 @@
 import { defineAsyncComponent } from 'vue';
 
 export const ALL_POSTS = {
-  'my-first-post': {
-    title: 'My First Post',
-    slug: 'my-first-post',
-    createdAt: '2021-01-01',
-    component: defineAsyncComponent(() => import('~/posts/my-first-post.vue'))
+  'agi-is-not-that-important': {
+    title: 'AGI is not that important',
+    cover: 'assets/agi-is-not-that-important/agi_is_not_that_important-1.png',
+    slug: 'agi-is-not-that-important',
+    createdAt: '2024-12-13',
+    component: defineAsyncComponent(() => import('~/posts/agi_is_not_that_important.vue'))
   },
   // 'i18n-for-large-systems': {
   //   title: 'I18n for large systems',

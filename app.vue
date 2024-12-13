@@ -13,7 +13,7 @@
   
       <div class="profile">
         <div class="avatar">
-          <img src="assets/radames_roriz.jpg" alt="Avatar">
+          <img src="assets/radames_roriz.optimized.jpg" alt="Avatar">
         </div>
         <h1>Radamés Roriz</h1>
         <p>Software builder</p>
@@ -76,7 +76,7 @@ useHead({
     { name: 'og:description', content: 'Radamés Roriz - Software builder' },
     { name: 'og:type', content: 'website' },
     { name: 'og:url', content: 'https://roriz.dev' },
-    { name: 'og:image', content: 'https://roriz.dev/assets/radames_roriz.jpg' },
+    { name: 'og:image', content: 'https://roriz.dev/assets/radames_roriz.optimized.jpg' },
     { name: 'og:site_name', content: 'Radamés Roriz' },
     { name: 'og:locale', content: 'en_US' },
     { name: 'og:image:width', content: '1200' },

@@ -11,7 +11,7 @@
     </div>
 
     <transition name="fade" mode="out-in">
-      <component :is="post.component" />
+      <component :is="post.component" :post="post" />
     </transition>
   </section>
 </template>
@@ -25,7 +25,6 @@ const route = useRoute();
 const slug = ref(route.params.slug);
 
 const post = computed(() => {
-  console.log(ALL_POSTS[slug.value]);
   return ALL_POSTS[slug.value] || ALL_POSTS['my-first-post'];
 });
 </script>
