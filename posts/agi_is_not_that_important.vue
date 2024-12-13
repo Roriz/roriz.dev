@@ -48,7 +48,7 @@ const props = defineProps({
 })
 
 useHead({
-  title: 'AGI is Not That Important - Radamés Roriz',
+  title: 'AGI is Not That Important',
   meta: [
     {
       name: 'description',

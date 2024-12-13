@@ -33,6 +33,16 @@
     <button class="custom-fab" @click="isOpened = !isOpened">
       <i class="fa fa-bars"></i>
     </button>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPFB94MS86"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-GPFB94MS86');
+    </script>
   </main>
 </template>
 
