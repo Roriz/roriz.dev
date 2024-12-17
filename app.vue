@@ -34,25 +34,17 @@
       <i class="fa fa-bars"></i>
     </button>
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GPFB94MS86"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-GPFB94MS86');
-    </script>
   </main>
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 
 import '@fortawesome/fontawesome-free/css/all.css';
 import '@fortawesome/fontawesome-free/js/all.js';
 import './assets/main.css';
 import { onClickOutside  } from '@vueuse/core'
+import { googleAnalytics } from './vendors/google';
 
 const isOpened = ref(false);
 const mainContent = ref(null)
@@ -91,6 +83,10 @@ useHead({
     { name: 'og:locale', content: 'en_US' },
     { name: 'og:image:width', content: '1200' },
   ]
+})
+
+onMounted(() => {
+  googleAnalytics();
 })
 </script>
 

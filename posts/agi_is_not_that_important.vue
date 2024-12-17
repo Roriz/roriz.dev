@@ -1,7 +1,5 @@
 <template>
   <section class="post">
-    <h1>AGI is Not That Important</h1>
-    
     <div class="tldr">
       <p><strong>TLDR;</strong> market is overly focused on improving LLMs, like how many parameters they have, context size, or even achieving AGI. However, none of these advancements will define our future. The real transformation will come from the software surrounding the LLMs. This software will control, orchestrate, and apply the right business rules, driving meaningful change. Even if we achieve true AGI, its impact will likely be far less disruptive than the market anticipates.</p>
       <p>Join me in exploring the future and discovering how software can leverage these powerful new tools we call LLMs.</p>
@@ -31,11 +29,10 @@
     <p>The best use of AI is to mimic processes and human behavior, while the best use of software is to structure and create deterministic use cases. Neither replaces the other, but <strong>together</strong> they complement each other. When combined, they become powerful allies in solving complex problems.</p>
   
     <h2>The Role of Software in Scaling AI</h2>
-  
     <p>We are just beginning to explore the potential of <strong>AI+Engineer</strong>. Right now, almost all solutions are closely tied to <strong>foundation models</strong>. While many companies are working on second-level solutions, including those that own the foundation models, we have yet to see clear dominant players emerge in this space.</p>
+    <p>As we go deeper into AI applications, the need for <strong>functionalities</strong>, consistency, integrations, and business rules becomes more evident. These are challenges that only <strong>software</strong> can fully address today.</p>
     <img src="assets/posts/agi_is_not_that_important-2.optimized.jpg" alt="Iceberg of potential AI fields, starting with 1. foundation models, 2. prompt wrappers, 3. intelligent software, and 4. autonomous software." />
     <p><em>Image 2: Iceberg of potential AI fields, starting with 1. foundation models, 2. prompt wrappers, 3. intelligent software, and 4. autonomous software.</em></p>
-    <p>As we go deeper into AI applications, the need for <strong>functionalities</strong>, consistency, integrations, and business rules becomes more evident. These are challenges that only <strong>software</strong> can fully address today.</p>
   </section>
 </template>
 
