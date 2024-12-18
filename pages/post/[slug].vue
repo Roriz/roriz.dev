@@ -13,7 +13,7 @@
     <transition name="fade" mode="out-in">
       <component :is="post.component" :post="post" />
     </transition>
-    <p>If any of this resonates with you, feel free to connect with me on <a href="https://www.linkedin.com/in/radames-roriz/">LinkedIn</a> or reach out via <a href="mailto:radamesroriz@gmail.com">email</a>.</p>
+    <p>If any of this resonates with you, feel free to connect with me on <a href="https://www.linkedin.com/in/radames-roriz/">LinkedIn</a> or reach out via <a href="mailto:radames@roriz.dev">email</a>.</p>
   </section>
 </template>
 

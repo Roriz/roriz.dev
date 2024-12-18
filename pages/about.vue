@@ -18,7 +18,7 @@
     <p>I thrive on generating and executing new ideas, thinking through every aspect from conception to execution: the business model, the technology, the team, the market, and the clients.</p>
     <p>Currently, I’m captivated by the potential of generative AI and its transformative impact on the future, often imagining innovations yet to come.</p>
     <p>This space is a platform for me to share my thoughts, projects, achievements, and anything else I find inspiring.</p>
-    <p>If any of this resonates with you, feel free to connect with me on <a href="https://www.linkedin.com/in/radames-roriz/">LinkedIn</a> or reach out via <a href="mailto:radamesroriz@gmail.com">email</a>.</p>
+    <p>If any of this resonates with you, feel free to connect with me on <a href="https://www.linkedin.com/in/radames-roriz/">LinkedIn</a> or reach out via <a href="mailto:radames@roriz.dev">email</a>.</p>
   </div>
 </template>
 
