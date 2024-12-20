@@ -11,17 +11,7 @@
         </nav>
       </aside>
   
-      <div class="profile">
-        <div class="avatar">
-          <img src="assets/radames_roriz.optimized.jpg" alt="Avatar">
-        </div>
-        <h1>Radamés Roriz</h1>
-        <p>Software builder</p>
-        <div class="social-links">
-          <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a>
-          <a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a>
-        </div>
-      </div>
+      <Profile class="profile" />
     </section>
   
     <section class="content">
@@ -45,6 +35,8 @@ import '@fortawesome/fontawesome-free/js/all.js';
 import './assets/main.css';
 import { onClickOutside  } from '@vueuse/core'
 import { googleAnalytics } from './vendors/google';
+
+import Profile from '~/components/profile.vue';
 
 const isOpened = ref(false);
 const mainContent = ref(null)
@@ -155,48 +147,6 @@ onMounted(() => {
 .sidebar nav ul li a svg {
   font-size: 1.5rem;
   margin-bottom: calc(var(--spacing) * 1);
-}
-
-.profile {
-  min-width: 300px;
-  max-width: 300px;
-  padding: calc(var(--spacing) * 3);
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.avatar img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 2px solid var(--bg-accent);
-  margin-bottom: calc(var(--spacing) * 3);
-}
-
-.profile h1 {
-  font-size: 2rem;
-  margin-bottom: calc(var(--spacing) * 2);
-}
-
-.profile p {
-  margin-bottom: calc(var(--spacing) * 3);
-  color: var(--tx-secondary);
-  font-size: 1.2rem;
-}
-
-.social-links {
-  margin-bottom: calc(var(--spacing) * 3);
-}
-
-.social-links a {
-  margin-right: calc(var(--spacing) * 2);
-  color: var(--tx-primary);
-  font-size: 1.5rem;
-}
-.social-links a:hover {
-  color: var(--tx-accent);
 }
 
 .intro {

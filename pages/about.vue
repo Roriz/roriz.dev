@@ -1,16 +1,6 @@
 <template>
   <div class="about">
-    <section class="profile">
-      <div class="avatar">
-        <img src="assets/radames_roriz.optimized.jpg" alt="Avatar">
-      </div>
-      <h1>Radamés Roriz</h1>
-      <p>Software builder</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a>
-        <a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a>
-      </div>
-    </section>
+    <Profile orientation="horizontal" />
   
     <p>I’m a software engineer with a passion for building innovative solutions.</p>
     <p>With over 15 years of experience in software development, I’ve contributed to a wide range of projects, spanning from agile startups to large-scale enterprise applications.  </p>
@@ -22,42 +12,11 @@
   </div>
 </template>
 
+<script setup>
+import Profile from '~/components/profile.vue';
+</script>
+
 <style scoped>
-.profile {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.profile .avatar {
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 1rem;
-  border: 1px solid var(--bg-accent);
-}
-.profile .avatar img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-links a {
-  color: var(--tx-accent);
-  font-size: 1.5rem;
-}
-
-.social-links a:hover {
-  color: var(--tx-primary);
-}
-
 p {
   line-height: 1.5;
   margin-bottom: 1rem;

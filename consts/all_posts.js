@@ -6,7 +6,7 @@ export const ALL_POSTS = {
     cover: 'assets/agi-is-not-that-important/agi_is_not_that_important-1.png',
     slug: 'agi-is-not-that-important',
     createdAt: '2024-12-13',
-    component: defineAsyncComponent(() => import('~/posts/agi_is_not_that_important.vue'))
+    component: defineAsyncComponent(() => import('~/components/posts/agi_is_not_that_important.vue'))
   },
   // 'i18n-for-large-systems': {
   //   title: 'I18n for large systems',
