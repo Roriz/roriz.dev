@@ -24,6 +24,7 @@
       <i class="fa fa-bars"></i>
     </button>
 
+    <div id="teleport"></div>
   </main>
 </template>
 
@@ -216,5 +217,12 @@ onMounted(() => {
   padding: calc(var(--spacing) * 4);
   width: 100%;
   min-height: 100vh;
+}
+
+#teleport {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 9;
 }
 </style>

@@ -16,7 +16,7 @@
 
     <section class="post-footer">
       <p>Enjoyed this post?</p>
-      <button @click="subscribe">Subscribe</button>
+      <SubscriptionModal />
     </section>
     <Profile orientation="horizontal" class="post-footer" />
   </div>
@@ -28,6 +28,7 @@ import { useRoute } from 'vue-router';
 import { ALL_POSTS } from '~/consts/all_posts';
 
 import Profile from '~/components/profile.vue';
+import SubscriptionModal from '~/components/subscription_modal.vue';
 
 const route = useRoute();
 const slug = ref(route.params.slug);
@@ -68,24 +69,6 @@ const post = computed(() => {
   align-items: center;
 }
 
-.post-footer button {
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  background-color: var(--bg-primary);
-  color: var(--tx-primary);
-  border: none;
-  cursor: pointer;
-  margin-top: var(--spacing);
-  font-weight: bold;
-}
-
-.post-footer button:hover {
-  background-color: var(--bg-accent);
-}
-
-.post-footer button:active {
-  background-color: var(--bg-accent-hover);
-}
 
 .post >>> p {
   margin: var(--spacing) 0;
