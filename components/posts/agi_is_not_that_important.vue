@@ -54,7 +54,7 @@ useHead({
     },
     { name: 'keywords', content: 'AGI, Artificial General Intelligence, Blog, Radamés Roriz' },
     { name: 'author', content: 'Radamés Roriz' },
-    { property: 'og:title', content: 'AGI is Not That Important - Radamés Roriz' },
+    { property: 'og:title', content: 'AGI is Not That Important' },
     { property: 'og:description', content: props.post.description },
     { property: 'og:type', content: 'article' },
     { property: 'og:url', content: props.post.url },

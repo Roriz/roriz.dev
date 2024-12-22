@@ -23,9 +23,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { ALL_POSTS } from '~/consts/all_posts';
+import Prism from 'prismjs';
+import 'prismjs/components/prism-ruby';
+import 'prismjs/themes/prism-tomorrow.css';
 
 import Profile from '~/components/profile.vue';
 import SubscriptionModal from '~/components/subscription_modal.vue';
@@ -35,6 +38,11 @@ const slug = ref(route.params.slug);
 
 const post = computed(() => {
   return ALL_POSTS[slug.value] || ALL_POSTS['my-first-post'];
+});
+
+onMounted(() => {
+  console.log(Prism);
+  Prism.highlightAll();
 });
 </script>
 
@@ -73,7 +81,7 @@ const post = computed(() => {
 .post >>> p {
   margin: var(--spacing) 0;
 }
-.post >>> p strong, .post >>> p b {
+.post >>> p strong, .post >>> p b, .post >>> li strong {
   font-weight: bold;
   color: var(--tx-accent);
 }
@@ -96,6 +104,11 @@ const post = computed(() => {
 .post >>> img {
   max-width: 70%;
   height: auto;
+}
+
+.post >>> pre {
+  max-width: 100%;
+  overflow-x: auto;
 }
 
 .post >>> em {

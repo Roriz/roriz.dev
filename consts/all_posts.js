@@ -1,9 +1,16 @@
 import { defineAsyncComponent } from 'vue';
 
 export const ALL_POSTS = {
+  'data-extraction': {
+    title: 'AI reshaped software: Data Extraction',
+    cover: 'assets/posts/data_extraction-1.optimized.jpg',
+    slug: 'data-extraction',
+    createdAt: '2024-12-22',
+    component: defineAsyncComponent(() => import('~/components/posts/data_extraction.vue'))
+  },
   'agi-is-not-that-important': {
     title: 'AGI is not that important',
-    cover: 'assets/agi-is-not-that-important/agi_is_not_that_important-1.png',
+    cover: 'assets/posts/agi_is_not_that_important-1.optimized.jpg',
     slug: 'agi-is-not-that-important',
     createdAt: '2024-12-13',
     component: defineAsyncComponent(() => import('~/components/posts/agi_is_not_that_important.vue'))
@@ -13,12 +20,6 @@ export const ALL_POSTS = {
   //   slug: 'i18n-for-large-systems',
   //   createdAt: '2021-10-27',
   //   component: defineAsyncComponent(() => import('~/posts/i18n-for-large-systems.vue'))
-  // },
-  // 'simplify-blockchain': {
-  //   title: 'Simplify blockchain',
-  //   slug: 'simplify-blockchain',
-  //   createdAt: '2022-03-02',
-  //   component: defineAsyncComponent(() => import('~/posts/simplify-blockchain.vue'))
   // },
   // 'scaling-local-envoriment-by-ruby-cli': {
   //   title: 'Scaling local envoriment by ruby cli',
@@ -31,18 +32,6 @@ export const ALL_POSTS = {
   //   slug: 'we-need-less-layers-not-more',
   //   createdAt: '2024-04-05',
   //   component: defineAsyncComponent(() => import('~/posts/we-need-less-layers-not-more.vue'))
-  // },
-  // 'ai-already-change-software-data-extraction': {
-  //   title: 'AI already change software - Data extraction',
-  //   slug: 'ai-already-change-software-data-extraction',
-  //   createdAt: '2024-12-08',
-  //   component: defineAsyncComponent(() => import('~/posts/ai-already-change-software-data-extraction.vue'))
-  // },
-  // 'agi-is-not-important': {
-  //   title: 'Agi is not important',
-  //   slug: 'agi-is-not-important',
-  //   createdAt: '2024-12-23',
-  //   component: defineAsyncComponent(() => import('~/posts/agi-is-not-important.vue'))
   // },
   // 'services-topology': {
   //   title: 'Services topology',
