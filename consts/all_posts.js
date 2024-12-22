@@ -1,6 +1,18 @@
 import { defineAsyncComponent } from 'vue';
 
 export const ALL_POSTS = {
+  'ai-reshaped-software-2': {
+    title: 'WIP - AI reshaped software: Part 2',
+    cover: 'assets/posts/data_extraction-1.optimized.jpg',
+    slug: 'ai-reshaped-software-2',
+    createdAt: '2025-01-XX',
+  },
+  'ai-maturity': {
+    title: 'WIP - AI Maturity',
+    cover: 'assets/posts/data_extraction-1.optimized.jpg',
+    slug: 'ai-maturity',
+    createdAt: '2025-01-XX',
+  },
   'data-extraction': {
     title: 'AI reshaped software: Data Extraction',
     cover: 'assets/posts/data_extraction-1.optimized.jpg',
@@ -15,28 +27,24 @@ export const ALL_POSTS = {
     createdAt: '2024-12-13',
     component: defineAsyncComponent(() => import('~/components/posts/agi_is_not_that_important.vue'))
   },
-  // 'i18n-for-large-systems': {
-  //   title: 'I18n for large systems',
-  //   slug: 'i18n-for-large-systems',
-  //   createdAt: '2021-10-27',
-  //   component: defineAsyncComponent(() => import('~/posts/i18n-for-large-systems.vue'))
-  // },
-  // 'scaling-local-envoriment-by-ruby-cli': {
-  //   title: 'Scaling local envoriment by ruby cli',
-  //   slug: 'scaling-local-envoriment-by-ruby-cli',
-  //   createdAt: '2022-08-05',
-  //   component: defineAsyncComponent(() => import('~/posts/scaling-local-envoriment-by-ruby-cli.vue'))
-  // },
-  // 'we-need-less-layers-not-more': {
-  //   title: 'we need less layers, not more',
-  //   slug: 'we-need-less-layers-not-more',
-  //   createdAt: '2024-04-05',
-  //   component: defineAsyncComponent(() => import('~/posts/we-need-less-layers-not-more.vue'))
-  // },
-  // 'services-topology': {
-  //   title: 'Services topology',
-  //   slug: 'services-topology',
-  //   createdAt: '2025-XX-XX',
-  //   component: defineAsyncComponent(() => import('~/posts/services-topology.vue'))
-  // }
+  'we-need-less-layers-not-more': {
+    title: 'WIP - we need less layers, not more WIP',
+    slug: 'we-need-less-layers-not-more',
+    createdAt: '2024-04-05',
+  },
+  'services-topology': {
+    title: 'WIP - Services topology WIP',
+    slug: 'services-topology',
+    createdAt: '2024-01-XX',
+  },
+  'scaling-local-envoriment-by-ruby-cli': {
+    title: 'WIP - Scaling local envoriment by ruby cli WIP',
+    slug: 'scaling-local-envoriment-by-ruby-cli',
+    createdAt: '2022-08-05',
+  },
+  'i18n-for-large-systems': {
+    title: 'WIP - I18n for large systems WIP',
+    slug: 'i18n-for-large-systems',
+    createdAt: '2021-10-27',
+  },
 }

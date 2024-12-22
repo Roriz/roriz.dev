@@ -11,7 +11,10 @@
     </section>
 
     <transition name="fade" mode="out-in">
-      <component :is="post.component" :post="post" class="post" />
+      <component v-if="post.component" :is="post.component" :post="post" class="post" />
+      <span v-else>
+        <p>This post is still a work in progress. Check back soon!</p>
+      </span>
     </transition>
 
     <section class="post-footer">

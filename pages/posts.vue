@@ -3,7 +3,7 @@
     <h1>Posts</h1>
   
     <ul class="posts">
-      <li v-for="post in ALL_POSTS" :key="post.slug">
+      <li v-for="post in ALL_POSTS" :key="post.slug" :class="{ 'wip': !post.component }">
         <NuxtLink :to="`/post/${post.slug}`">
           <span>{{ post.title }}</span>
           <time datetime="{{ post.createdAt }}">{{ post.createdAt }}</time>
@@ -28,13 +28,11 @@ h1 {
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   align-items: center;
   width: 100%;
 }
 
 .posts li {
-  margin-bottom: calc(var(--spacing) * 2);
   width: 100%;
 }
 
@@ -46,7 +44,16 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   border-bottom: 1px solid var(--bg-tertiary);
-  padding: calc(var(--spacing) * 2) 0;
+  padding: calc(var(--spacing) * 2);
+}
+
+.posts li.wip a {
+  color: var(--tx-secondary);
+}
+
+
+.posts li a:hover {
+  background-color: var(--bg-tertiary);
 }
 
 .posts li a span {
