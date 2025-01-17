@@ -107,11 +107,25 @@ onMounted(() => {
 .post >>> img {
   max-width: 70%;
   height: auto;
+  margin: var(--spacing) auto;
 }
 
 .post >>> pre {
   max-width: 100%;
   overflow-x: auto;
+}
+
+.post >>> section {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post >>> ol, .post >>> ul {
+  margin: var(--spacing) 0;
+  padding-left: calc(var(--spacing) * 2);
+  max-width: 100%;
 }
 
 .post >>> em {

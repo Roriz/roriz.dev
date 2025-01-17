@@ -7,11 +7,12 @@ export const ALL_POSTS = {
     slug: 'ai-reshaped-software-2',
     createdAt: '2025-01-XX',
   },
-  'ai-maturity': {
-    title: 'WIP - AI Maturity',
-    cover: 'assets/posts/data_extraction-1.optimized.jpg',
-    slug: 'ai-maturity',
-    createdAt: '2025-01-XX',
+  'ai_hype_is_real_but_for_the_wrong_reason': {
+    title: 'AI hype is real, but for the wrong reason',
+    cover: 'assets/posts/ai_hype_is_real_but_for_the_wrong_reason_1.optimized.webp',
+    slug: 'ai_hype_is_real_but_for_the_wrong_reason',
+    createdAt: '2025-01-17',
+    component: defineAsyncComponent(() => import('~/components/posts/ai_hype_is_real_but_for_the_wrong_reason.vue'))
   },
   'data-extraction': {
     title: 'AI reshaped software: Data Extraction',

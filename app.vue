@@ -90,7 +90,6 @@ onMounted(() => {
   align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
-  width: 100%;
 }
 
 .menu {
