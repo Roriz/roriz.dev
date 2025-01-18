@@ -1,37 +1,48 @@
 <template>
-  <div>
-    <section class="post-header">
-      <NuxtLink to="/posts">
-        <i class="fas fa-arrow-left" />
-        Back
-      </NuxtLink>
+  <article class="blog-post">
+    <header class="post-header">
+      <nav aria-label="Post navigation">
+        <NuxtLink to="/posts" class="back-link">
+          <i class="fas fa-arrow-left" aria-hidden="true" />
+        </NuxtLink>
+      </nav>
 
       <h1>{{ post.title }}</h1>
-      <time datetime="{{ post.createdAt }}">{{ post.createdAt }}</time>
-    </section>
+      <time :datetime="post.createdAt">{{ post.createdAt }}</time>
+    </header>
 
-    <transition name="fade" mode="out-in">
-      <component v-if="post.component" :is="post.component" :post="post" class="post" />
-      <span v-else>
-        <p>This post is still a work in progress. Check back soon!</p>
-      </span>
-    </transition>
+    <main>
+      <transition name="fade" mode="out-in">
+        <component 
+          v-if="post.component" 
+          :is="post.component" 
+          :post="post" 
+          class="post" 
+        />
+        <div v-else class="post-placeholder">
+          <p>This post is still a work in progress. Check back soon!</p>
+        </div>
+      </transition>
+    </main>
 
-    <section class="post-footer">
-      <p>Enjoyed this post?</p>
-      <SubscriptionModal />
-    </section>
-    <Profile orientation="horizontal" class="post-footer" />
-  </div>
+    <footer class="post-footer">
+      <section v-show="false" aria-label="Newsletter subscription">
+        <h2>Enjoyed this post?</h2>
+        <SubscriptionModal />
+      </section>
+      <Profile orientation="horizontal" class="post-footer-profile" />
+    </footer>
+  </article>
 </template>
 
 <script setup>
 import { ref, computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { ALL_POSTS } from '~/consts/all_posts';
-import Prism from 'prismjs';
-import 'prismjs/components/prism-ruby';
-import 'prismjs/themes/prism-tomorrow.css';
+import highlight from 'highlight.js';
+import 'highlight.js/styles/atom-one-dark.css';
+// import 'highlight.js/styles/github-dark.css';
+
 
 import Profile from '~/components/profile.vue';
 import SubscriptionModal from '~/components/subscription_modal.vue';
@@ -44,8 +55,7 @@ const post = computed(() => {
 });
 
 onMounted(() => {
-  console.log(Prism);
-  Prism.highlightAll();
+  highlight.highlightAll();
 });
 </script>
 
@@ -54,8 +64,18 @@ onMounted(() => {
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  margin-bottom: calc(var(--spacing) * 2);
   justify-content: space-between;
+  align-items: center;
+}
+
+.post-header .back-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--tx-primary);
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: calc(var(--spacing) * 1);
 }
 
 .post-header a {
@@ -63,6 +83,11 @@ onMounted(() => {
   align-items: center;
   gap: 0.5rem;
 }
+
+.post-header time {
+  white-space: nowrap;
+}
+
 
 .post, .post-footer {
   margin: var(--spacing) 0;
@@ -114,6 +139,14 @@ onMounted(() => {
   max-width: 100%;
   overflow-x: auto;
 }
+
+@media (min-width: 769px) {
+  .post >>> pre, .post >>> code {
+    max-width: calc(100vw - 400px);
+    display: inline-block
+  }
+}
+  
 
 .post >>> section {
   max-width: 100%;

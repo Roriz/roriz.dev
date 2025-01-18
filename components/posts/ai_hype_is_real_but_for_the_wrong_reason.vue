@@ -44,16 +44,19 @@ puts ActiveAI::DataExtractor.call(
   {
     salesperson_demonstrates_active_listening: {
       type: 'Integer',
-      description: 'The salesperson demonstrates active listening? The salesperson demonstrates ...',
+      description: 'The salesperson demonstrates active listening?',
       max: 10,
       min: 1
     },
     next_clear_step: {
       type: 'String',
-      description: 'What are the next clear steps? Example: sign up for a free trial, schedule a demo, etc.',
+      description: 'What are the next clear steps?',
+      enum: ['Schedule a demo', 'Send a proposal', 'Follow-up in 3 days']
     }
   }
-) # => { salesperson_demonstrates_active_listening: 8, next_clear_step: "Schedule a demo" }</code></pre>
+)
+# { salesperson_demonstrates_active_listening: 8, next_clear_step: "Schedule a demo" }
+</code></pre>
         </li>
         <li>
           <p>Want to create an inventory without a system? Ok, take a photo every day of a paper with the notes.</p>
@@ -67,7 +70,7 @@ puts ActiveAI::DataExtractor.call(
         <li>
           <p>Do you have tons of <strong>1:1 reports</strong>, and need to see all, but if prioritized?</p>
           <pre><code class="lang-rb">one_on_one_reports = [
-  { score: nil, transcript: 'Overall, it\\'s been all good...' },
+  { score: nil, transcript: 'Overall, it\'s been all good...' },
   { score: nil, transcript: 'I noticed that you have been struggling...' },
   { score: nil, transcript: 'Last week I was on the beach...' },
 ]
@@ -92,14 +95,16 @@ Choose the shipping option, act like a real customer and make a fair guess.
 The shipping is for a pen priced at $1.
 CRITERIA
 ranked_items = ActiveAI::EloRanking.call(shipping_fees, criteria)
-puts ranked_items # => [{ name: 'Standard', score: 1600 }, { name: 'Express', score: 1000 }]
+puts ranked_items
+# => [{ name: 'Standard', score: 1600 }, { name: 'Express', score: 1000 }]
 
 criteria = <<~CRITERIA
 Choose the shipping option, act like a real customer and make a fair guess.
 The shipping is for a MacBook priced at $1000.
 CRITERIA
 ranked_items = ActiveAI::EloRanking.call(shipping_fees, criteria)
-puts ranked_items # => [{ name: 'Express', score: 1580 }, { name: 'Standard', score: 1020 }]</code></pre>
+puts ranked_items
+# => [{ name: 'Express', score: 1580 }, { name: 'Standard', score: 1020 }]</code></pre>
         </li>
       </ol>
       <p>I can continue on for a lot more, but I think you understand. We gain a <strong>superpower</strong> for working with the abstract, creating determinism in places where it was not possible before. It is of course <strong>not perfect</strong>, and can hallucinate in some contexts. But this should not be a problem, the best place for GenAI is exactly when the answer is not explicitly clear.</p>

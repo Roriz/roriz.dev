@@ -53,8 +53,8 @@ defineProps({
 }
 
 .avatar img {
-  width: 200px;
-  height: 200px;
+  width: 10rem;
+  height: 10rem;
   border-radius: 50%;
   border: 2px solid var(--bg-accent);
 }

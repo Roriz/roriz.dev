@@ -90,6 +90,7 @@ onMounted(() => {
   align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
+  flex-grow: 1;
 }
 
 .menu {
@@ -105,6 +106,7 @@ onMounted(() => {
   opacity: 0;
   z-index: 1;
   background-color: var(--bg-tertiary);
+  max-width: 400px;
 }
 .menu.opened {
   transform: translateX(0);
@@ -180,7 +182,7 @@ onMounted(() => {
   color: var(--tx-accent-hover);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .menu {
     flex-direction: row;
     position: sticky;
@@ -210,12 +212,17 @@ onMounted(() => {
   .custom-fab {
     display: none;
   }
+
+  .content {
+    max-width: calc(100vw - 400px);
+  }
 }
 
 .content {
   padding: calc(var(--spacing) * 4);
   width: 100%;
   min-height: 100vh;
+  max-width: 100vw;
 }
 
 #teleport {

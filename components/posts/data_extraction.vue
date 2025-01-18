@@ -27,8 +27,9 @@ headers = {
 }
 
 prompt = &lt;&lt;-PROMPT
-You are a content moderator reviewing a post to determine if has Mental Health Struggles or not.
-Provide the reasoning behind your score and rate it on a scale from 1 to 10, where 1 indicates it is probably not discussing , and 10 indicates it is likely discussing.
+You are a content moderator reviewing a post to determineif has Mental Health Struggles or not.
+Provide the reasoning behind your score and rate it on a scale from 1 to 10,
+where 1 indicates it is probably not discussing , and 10 indicates it is likely discussing.
 Return the json object: {score: Number, reasoning: String}
 PROMPT
 user_message = 'Feeling stuck in a dark place'
@@ -44,7 +45,9 @@ data = {
 
 response = Net::HTTP.post(uri, data.to_json, headers)
 puts JSON.parse(response.body)['choices'][0]['message']['content']
-# { 'score': 8, 'reasoning': 'The phrase 'stuck in a dark place' typically indicates a feeling of being trapped...' }
+# {
+  score: 8,
+  reasoning: "The phrase 'stuck in a dark place' typically indicates a feeling of being trapped..." }
 </code>
     </pre>
     
