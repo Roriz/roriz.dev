@@ -13,14 +13,21 @@ import 'highlight.js/styles/monokai-sublime.css';
 const code = ref(null);
 const maxWidth = ref(0);
 
+function resizeCodeTag() {
+  maxWidth.value = window.innerWidth - 64; // padding
+  if (window.innerWidth > 769) {
+    maxWidth.value = window.innerWidth - 528; // sidebar width + padding
+  }
+}
+
 onMounted(() => {
   highlight.highlightBlock(code.value);
 
-  maxWidth.value = window.innerWidth;    
-  if (window.innerWidth > 769) {
-    maxWidth.value = window.innerWidth - 550;    
-  }
+  if (window?.onresize) { window.onresize = resizeCodeTag }
+  resizeCodeTag();
 })
+
+
 </script>
 
 <style scoped>

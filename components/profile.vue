@@ -89,4 +89,23 @@ defineProps({
 .social-links a:hover {
   color: var(--tx-accent);
 }
+
+@media (max-width: 768px) {
+  .profile {
+    padding: calc(var(--spacing) * 2);
+  }
+  .avatar img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .profile h1 {
+    font-size: 1.5rem;
+  }
+  .profile p {
+    font-size: 1rem;
+  }
+  .social-links a {
+    font-size: 1.2rem;
+  }
+}
 </style>
