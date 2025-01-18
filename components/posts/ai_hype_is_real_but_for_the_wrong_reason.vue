@@ -33,7 +33,8 @@
       <ol>
         <li>
           <p>Do you want to measure the <strong>call metrics</strong>? With the meeting transcription, you can extract the key metrics that are important for your company.</p>
-          <pre><code class="lang-rb">transcript = <<~TRANSCRIPT
+          <RorizCode>
+transcript = <<~TRANSCRIPT
 salesperson: Hi there! ...
 lead: Hello, my name is ...
 salesperson: Nice to meet you, ...
@@ -56,20 +57,23 @@ puts ActiveAI::DataExtractor.call(
   }
 )
 # { salesperson_demonstrates_active_listening: 8, next_clear_step: "Schedule a demo" }
-</code></pre>
+          </RorizCode>
         </li>
         <li>
           <p>Want to create an inventory without a system? Ok, take a photo every day of a paper with the notes.</p>
-          <pre><code class="lang-rb">inventory_notes = File.open('inventory_notes.jpg')
+          <RorizCode>
+inventory_notes = File.open('inventory_notes.jpg')
 markdown = ActiveAI::ImageTranscribe.call(picture)
 puts ActiveAI::DataExtractor.call(
   markdown,
   { quantity_of_apples: { type: 'Integer', min: 0 } }
-) # => { quantity_of_apples: 3 }</code></pre>
+) # => { quantity_of_apples: 3 }
+          </RorizCode>
         </li>
         <li>
           <p>Do you have tons of <strong>1:1 reports</strong>, and need to see all, but if prioritized?</p>
-          <pre><code class="lang-rb">one_on_one_reports = [
+          <RorizCode>
+one_on_one_reports = [
   { score: nil, transcript: 'Overall, it\'s been all good...' },
   { score: nil, transcript: 'I noticed that you have been struggling...' },
   { score: nil, transcript: 'Last week I was on the beach...' },
@@ -82,11 +86,13 @@ one_on_one_reports.each_with_index do |report, index|
   one_on_one_reports[index][:score] = ActiveAI::Scorer.call(report, criteria)
 end
 
-prioritized_reports = one_on_one_reports.sort_by { |report| report[:score] }</code></pre>
+prioritized_reports = one_on_one_reports.sort_by { |report| report[:score] }
+          </RorizCode>
         </li>
         <li>
           <p><strong>Rank a list of shipping fees</strong> that shows first the cheapest or fastest? Ranking:</p>
-          <pre><code class="lang-rb">shipping_fees = [
+          <RorizCode>
+shipping_fees = [
   { name: 'Standard', price: 0, days: 5 },
   { name: 'Express', price: 10, days: 2 },
 ]
@@ -104,7 +110,8 @@ The shipping is for a MacBook priced at $1000.
 CRITERIA
 ranked_items = ActiveAI::EloRanking.call(shipping_fees, criteria)
 puts ranked_items
-# => [{ name: 'Express', score: 1580 }, { name: 'Standard', score: 1020 }]</code></pre>
+# => [{ name: 'Express', score: 1580 }, { name: 'Standard', score: 1020 }]
+          </RorizCode>
         </li>
       </ol>
       <p>I can continue on for a lot more, but I think you understand. We gain a <strong>superpower</strong> for working with the abstract, creating determinism in places where it was not possible before. It is of course <strong>not perfect</strong>, and can hallucinate in some contexts. But this should not be a problem, the best place for GenAI is exactly when the answer is not explicitly clear.</p>
@@ -121,6 +128,8 @@ puts ranked_items
 </template>
 
 <script setup>
+import RorizCode from '@/components/roriz_code.vue';
+
 const props = defineProps({
   post: {
     type: Object,

@@ -39,10 +39,6 @@
 import { ref, computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { ALL_POSTS } from '~/consts/all_posts';
-import highlight from 'highlight.js';
-import 'highlight.js/styles/atom-one-dark.css';
-// import 'highlight.js/styles/github-dark.css';
-
 
 import Profile from '~/components/profile.vue';
 import SubscriptionModal from '~/components/subscription_modal.vue';
@@ -52,10 +48,6 @@ const slug = ref(route.params.slug);
 
 const post = computed(() => {
   return ALL_POSTS[slug.value] || ALL_POSTS['my-first-post'];
-});
-
-onMounted(() => {
-  highlight.highlightAll();
 });
 </script>
 
@@ -133,20 +125,7 @@ onMounted(() => {
   max-width: 70%;
   height: auto;
   margin: var(--spacing) auto;
-}
-
-.post >>> pre {
-  max-width: 100%;
-  overflow-x: auto;
-}
-
-@media (min-width: 769px) {
-  .post >>> pre, .post >>> code {
-    max-width: calc(100vw - 400px);
-    display: inline-block
-  }
-}
-  
+} 
 
 .post >>> section {
   max-width: 100%;

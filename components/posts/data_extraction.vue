@@ -18,8 +18,7 @@
     <h3><strong>Cheaper Content Moderation - Social Media Industry</strong></h3>
     <p>Social media companies <strong>depends on</strong> user-generated content, including <strong>text</strong>, images, and audio. They face challenges in filtering harmful material like violence, sexual content, threats, illicit activities, and spam, while simultaneously encouraging user engagement.</p>
     <p>Historically, <strong>keyword searches</strong> have been a simple, cost-effective moderation tool. However, users often find creative ways to <strong>bypass</strong> these filters. For instance, mental health discussions rely on context-sensitive language, making detection by keyword systems ineffective.</p>
-    <pre>
-<code class="lang-rb">
+    <RorizCode>
 uri = URI('https://api.openai.com/v1/chat/completions')
 headers = {
   'Content-Type': 'application/json',
@@ -48,15 +47,13 @@ puts JSON.parse(response.body)['choices'][0]['message']['content']
 # {
   score: 8,
   reasoning: "The phrase 'stuck in a dark place' typically indicates a feeling of being trapped..." }
-</code>
-    </pre>
+    </RorizCode>
     
     <h2>Categorization by Product Description - Marketplace Industry</h2>
     <p>In any marketplace, the products displayed on the platform serve as its showcase. <strong>poorly written</strong>, miscategorized, or inadequately presented products can negatively impact conversion rates or, even worse, damage the marketplace’s overall reputation. To address this issue, many platforms use an approval process or <strong>reputation system</strong> to reduce low-quality content.</p>
     <p>For generic marketplaces like Amazon or Facebook, product listings cover a vast range. This variety often includes <strong>low-quality</strong> postings with generic titles, inaccurate descriptions, or all-uppercase text, or worst. Reviewing every listing manually would require significant resources, <strong>driving up costs</strong> and reducing the marketplace’s competitiveness.</p>
     <p>One alternative is to use existing data to <strong>cross-verify</strong> listings and generate consistent information. For example:</p>
-    <pre>
-<code class="lang-rb">
+    <RorizCode>
 uri = URI('https://api.openai.com/v1/chat/completions')
 headers = {
   'Content-Type': 'application/json',
@@ -101,8 +98,7 @@ data = {
 response = Net::HTTP.post(uri, data.to_json, headers)
 puts JSON.parse(response.body)['choices'][0]['message']['content']
 # {"category":"kitchen","subCategory":"Household Utensils"}
-</code>
-    </pre>
+</RorizCode>
 
     <h2>Data Extraction as a New Tool</h2>
     <p>This technique is <strong>not perfect</strong> accuracy and will require continuous reevaluation since its effectiveness can vary significantly depending on the LLM model version, <strong>prompt</strong>, and the quality of user inputs. Despite these inconsistencies, it already delivers <strong>real value</strong> to businesses.</p>
@@ -132,6 +128,8 @@ puts JSON.parse(response.body)['choices'][0]['message']['content']
 </template>
 
 <script setup>
+import RorizCode from '@/components/roriz_code.vue';
+
 const props = defineProps({
   post: {
     type: Object,
