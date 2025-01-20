@@ -8,21 +8,18 @@ export const ALL_POSTS = {
   },
   'ai_hype_is_real_but_for_the_wrong_reason': {
     title: 'AI hype is real, but for the wrong reason',
-    cover: '~/assets/posts/ai_hype_is_real_but_for_the_wrong_reason_1.optimized.webp',
     slug: 'ai_hype_is_real_but_for_the_wrong_reason',
     createdAt: '2025-01-17',
     component: defineAsyncComponent(() => import('@/components/posts/ai_hype_is_real_but_for_the_wrong_reason.vue'))
   },
   'data-extraction': {
     title: 'AI reshaped software: Data Extraction',
-    // cover: defineAsyncComponent(() => import('@/assets/posts/data_extraction-1.optimized.jpg')),
     slug: 'data-extraction',
     createdAt: '2024-12-22',
     component: defineAsyncComponent(() => import('@/components/posts/data_extraction.vue'))
   },
   'agi-is-not-that-important': {
     title: 'AGI is not that important',
-    // cover: import('@/assets/posts/agi_is_not_that_important-1.optimized.jpg'),
     slug: 'agi-is-not-that-important',
     createdAt: '2024-12-13',
     component: defineAsyncComponent(() => import('@/components/posts/agi_is_not_that_important.vue'))

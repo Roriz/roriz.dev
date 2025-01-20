@@ -117,6 +117,9 @@ puts ranked_items
         </li>
       </ol>
       <p>I can continue on for a lot more, but I think you understand. We gain a <strong>superpower</strong> for working with the abstract, creating determinism in places where it was not possible before. It is of course <strong>not perfect</strong>, and can hallucinate in some contexts. But this should not be a problem, the best place for GenAI is exactly when the answer is not explicitly clear.</p>
+      <NuxtLink to="/post/data-extraction" class="back-link">
+        Read more about data extraction
+      </NuxtLink>
     </section>
     <hr>
     <section>
