@@ -1,5 +1,9 @@
 <template>
-  <section class="post">
+  <div v-if="isPreview" class="post-preview">
+    <img src="assets/posts/agi_is_not_that_important-1.optimized.jpg" alt="The Meeseeks: Blue humanoid creatures that exist solely to fulfill one task and then cease to exist. They are incredibly effective but often hilariously overwhelmed when given overly complex or existentially difficult tasks." />
+    <span>{{ post.title }}</span>
+  </div>
+  <section v-else class="post">
     <div class="tldr">
       <p><strong>TLDR;</strong> market is overly focused on improving LLMs, like how many parameters they have, context size, or even achieving AGI. However, none of these advancements will define our future. The real transformation will come from the software surrounding the LLMs. This software will control, orchestrate, and apply the right business rules, driving meaningful change. Even if we achieve true AGI, its impact will likely be far less disruptive than the market anticipates.</p>
       <p>Join me in exploring the future and discovering how software can leverage these powerful new tools we call LLMs.</p>
@@ -41,6 +45,10 @@ const props = defineProps({
   post: {
     type: Object,
     required: true
+  },
+  isPreview: {
+    type: Boolean,
+    default: false
   }
 })
 

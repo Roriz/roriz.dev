@@ -1,5 +1,9 @@
 <template>
-  <section class="post">
+  <div v-if="isPreview" class="post-preview">
+    <img src="assets/posts/data_extraction-1.optimized.jpg" alt="Diagram showing text with some highlighted words, being converted into structured data" />
+    <span>{{ post.title }}</span>
+  </div>
+  <section v-else class="post">
     <div class="tldr">
       <p><strong>TL;DR</strong> Software has traditionally been <strong>overly deterministic</strong>, even in cases where businesses don’t require it. Being more <strong>flexible</strong> and creating new way to input is how AI has transformed software development. I demonstrate this through a series of articles discussing the possibilities offered by LLMs.</p>
       <p>I’ll explore how the <strong>data extraction</strong> capabilities of LLMs enable categorization, moderation, and easily data transform, among other tasks. Integrating <strong>AI+Engineer</strong> can significantly impact industries like social media and marketplaces. Every technique has its <strong>ideal time and place</strong>, and I’ll provide examples and discuss <strong>trade-offs</strong> to highlight effective applications.</p>
@@ -134,6 +138,10 @@ const props = defineProps({
   post: {
     type: Object,
     required: true
+  },
+  isPreview: {
+    type: Boolean,
+    default: false
   }
 })
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="profile" :class="orientation">
+  <section class="profile" :class="orientation">
     <div class="avatar">
       <img src="assets/radames_roriz.optimized.jpg" alt="Avatar">
     </div>
@@ -14,8 +14,7 @@
         <li><a href="to:radames@roriz.dev"><i class="fa-solid fa-envelope" /></a></li>
       </ul>
     </div>
-
-  </div>
+  </section>
 </template>
 
 <script setup>

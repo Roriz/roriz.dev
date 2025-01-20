@@ -1,5 +1,9 @@
 <template>
-  <div class="post">
+  <div v-if="isPreview" class="post-preview">
+    <img src="assets/posts/ai_hype_is_real_but_for_the_wrong_reason_1.optimized.webp" alt="Illustration of structured processes">
+    <span>{{ post.title }}</span>
+  </div>
+  <div v-else class="post">
     <header>
       <p><strong>TLDR;</strong> AI is not intelligent, <strong>doesn't think</strong>, it doesn't understand, and it's not about to become some super-intelligent being. GenAI can <strong>transform chaos into well-defined data</strong>, and that is huge! With multimodal LLMs, <strong>anything can become input</strong> to a system that previously only accepted specific and limited data types. It's not as fancy as the talk about a super-intelligent being, but it will change everything. <strong>Welcome to the structured data revolution</strong>.</p>
     </header>
@@ -45,13 +49,11 @@ puts ActiveAI::DataExtractor.call(
   {
     salesperson_demonstrates_active_listening: {
       type: 'Integer',
-      description: 'The salesperson demonstrates active listening?',
       max: 10,
       min: 1
     },
     next_clear_step: {
       type: 'String',
-      description: 'What are the next clear steps?',
       enum: ['Schedule a demo', 'Send a proposal', 'Follow-up in 3 days']
     }
   }
@@ -134,6 +136,10 @@ const props = defineProps({
   post: {
     type: Object,
     required: true
+  },
+  isPreview: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -141,13 +147,11 @@ useHead({
   title: 'AI Hype is real but for the wrong reason',
   meta: [
     {
-      name: 'description',
       content: `AI is not intelligent. It doesn't think, it doesn't understand, and it's not about to become some super-intelligent being. GenAI can transform chaos into well-defined structured data, and that is huge! With multimodal LLMs, anything can become input to a system that previously only accepted specific and limited data types. It's not as fancy as the talk about a super-intelligent being, but it will change everything. Welcome to the structured data revolution.`
     },
     { name: 'keywords', content: 'AI, Data Extraction, Structured Data, GenAI' },
     { name: 'author', content: 'Radamés Roriz' },
     { property: 'og:title', content: 'AI Hype is real but for the wrong reason' },
-    { property: 'og:description', content: props.post.description },
     { property: 'og:type', content: 'article' },
     { property: 'og:url', content: props.post.url },
     { property: 'og:image', content: props.post.cover },
