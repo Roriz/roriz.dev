@@ -4,7 +4,7 @@
       <aside class="sidebar">
         <nav>
           <ul>
-            <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li>
+            <!-- <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li> -->
             <li><NuxtLink to="/posts"><i class="fa fa-pencil-alt"></i> Blog</NuxtLink></li>
             <li><NuxtLink to="/about"><i class="fa fa-user"></i> About</NuxtLink></li>
           </ul>

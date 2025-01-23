@@ -14,6 +14,8 @@
 </template>
 
 <script setup>
+await navigateTo('/posts')
+
 import Recommendations from '~/components/recommendations.vue';
 </script>
 

@@ -1,7 +1,8 @@
 <template>
   <div>
+    <Recommendations />
+
     <h1>Posts</h1>
-  
     <ul class="posts">
       <li v-for="post in ALL_POSTS" :key="post.slug" :class="{ 'wip': !post.component }">
         <NuxtLink :to="`/post/${post.slug}`">
@@ -15,12 +16,14 @@
 
 <script setup>
 import { ALL_POSTS } from '~/consts/all_posts';
+
+import Recommendations from '~/components/recommendations.vue';
 </script>
 
 <style scoped>
 h1 {
   font-size: 2rem;
-  margin-bottom: calc(var(--spacing) * 2);
+  margin: calc(var(--spacing) * 2) 0;
 }
 
 .posts {
