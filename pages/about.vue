@@ -14,6 +14,18 @@
 
 <script setup>
 import Profile from '~/components/profile.vue';
+
+useHead({
+  title: 'About',
+  meta: [
+    {
+      name: 'description',
+      content: `I’m a software engineer with a passion for building innovative solutions. With over 15 years of experience in software development, I’ve contributed to a wide range of projects, spanning from agile startups to large-scale enterprise applications.`
+    },
+    { name: 'keywords', content: 'software engineer, software development, technology, entrepreneur, generative AI' },
+    { name: 'author', content: 'Radamés Roriz' },
+  ]
+})
 </script>
 
 <style scoped>

@@ -53,6 +53,13 @@ const slug = ref(route.params.slug);
 const post = computed(() => {
   return ALL_POSTS[slug.value] || ALL_POSTS['my-first-post'];
 });
+
+useHead({
+  title: post.value.title,
+  meta: [
+    { property: 'og:url', content: window.location.href }
+  ]
+})
 </script>
 
 <style>

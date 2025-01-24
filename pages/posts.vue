@@ -18,6 +18,18 @@
 import { ALL_POSTS } from '~/consts/all_posts';
 
 import Recommendations from '~/components/recommendations.vue';
+
+useHead({
+  title: 'Posts',
+  meta: [
+    {
+      name: 'description',
+      content: `Here is the place where I share my thoughts, projects, achievements, and anything else I find inspiring.`
+    },
+    { name: 'keywords', content: 'software engineer, software development, technology, entrepreneur, generative AI, Radamés Roriz' },
+    { name: 'author', content: 'Radamés Roriz' },
+  ]
+})
 </script>
 
 <style scoped>
