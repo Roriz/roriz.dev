@@ -18,7 +18,6 @@
 </template>
 
 <script setup>
-
 defineProps({
   orientation: {
     type: String,
@@ -27,7 +26,6 @@ defineProps({
   }
 })
 </script>
->
 
 <style scoped>
 .profile {

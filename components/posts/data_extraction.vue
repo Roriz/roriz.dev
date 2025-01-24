@@ -145,20 +145,22 @@ const props = defineProps({
   }
 })
 
-useHead({
-  title: 'AI reshaped software: Data Extraction',
-  meta: [
-    {
-      name: 'description',
-      content: `I'll explore how the data extraction capabilities of LLMs enable categorization, moderation, and easily data transform, among other tasks. Integrating AI+Engineer can significantly impact industries like social media and marketplaces. Every technique has its ideal time and place, and I'll provide examples and discuss trade-offs to highlight effective applications.`
-    },
-    { name: 'keywords', content: 'Data Extraction, AI, Blog, Radamés Roriz' },
-    { name: 'author', content: 'Radamés Roriz' },
-    { property: 'og:title', content: 'AI reshaped software: Data Extraction' },
-    { property: 'og:description', content: props.post.description },
-    { property: 'og:type', content: 'article' },
-    { property: 'og:url', content: props.post.url },
-    { property: 'og:image', content: props.post.cover },
-  ]
-})
+if (!props.isPreview) {
+  useHead({
+    title: 'AI reshaped software: Data Extraction',
+    meta: [
+      {
+        name: 'description',
+        content: `I'll explore how the data extraction capabilities of LLMs enable categorization, moderation, and easily data transform, among other tasks. Integrating AI+Engineer can significantly impact industries like social media and marketplaces. Every technique has its ideal time and place, and I'll provide examples and discuss trade-offs to highlight effective applications.`
+      },
+      { name: 'keywords', content: 'Data Extraction, AI, Blog, Radamés Roriz' },
+      { name: 'author', content: 'Radamés Roriz' },
+      { property: 'og:title', content: 'AI reshaped software: Data Extraction' },
+      { property: 'og:description', content: props.post.description },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:url', content: props.post.url },
+      { property: 'og:image', content: props.post.cover },
+    ]
+  })
+}
 </script>

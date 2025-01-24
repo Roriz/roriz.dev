@@ -1,8 +1,3 @@
-<template>
-  <div>
-  </div>
-</template>
-
 <script setup>
-await navigateTo('/posts')
+navigateTo('/posts')
 </script>

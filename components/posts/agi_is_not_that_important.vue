@@ -52,21 +52,23 @@ const props = defineProps({
   }
 })
 
-useHead({
-  title: 'AGI is Not That Important',
-  meta: [
-    {
-      name: 'description',
-      content: `The market is overly focused on improving LLMs, like how many parameters they have, context size, or even achieving AGI. However, none of these advancements will define our future. The real transformation will come from the software surrounding the LLMs. This software will control, orchestrate, and apply the right business rules, driving meaningful change. Even if we achieve true AGI, its impact will likely be far less disruptive than the market anticipates.
-      Join me in exploring the future and discovering how software can leverage these powerful new tools we call LLMs.`
-    },
-    { name: 'keywords', content: 'AGI, Artificial General Intelligence, Blog, Radamés Roriz' },
-    { name: 'author', content: 'Radamés Roriz' },
-    { property: 'og:title', content: 'AGI is Not That Important' },
-    { property: 'og:description', content: props.post.description },
-    { property: 'og:type', content: 'article' },
-    { property: 'og:url', content: props.post.url },
-    { property: 'og:image', content: props.post.cover },
-  ]
-})
+if (!props.isPreview) {
+  useHead({
+    title: 'AGI is Not That Important',
+    meta: [
+      {
+        name: 'description',
+        content: `The market is overly focused on improving LLMs, like how many parameters they have, context size, or even achieving AGI. However, none of these advancements will define our future. The real transformation will come from the software surrounding the LLMs. This software will control, orchestrate, and apply the right business rules, driving meaningful change. Even if we achieve true AGI, its impact will likely be far less disruptive than the market anticipates.
+        Join me in exploring the future and discovering how software can leverage these powerful new tools we call LLMs.`
+      },
+      { name: 'keywords', content: 'AGI, Artificial General Intelligence, Blog, Radamés Roriz' },
+      { name: 'author', content: 'Radamés Roriz' },
+      { property: 'og:title', content: 'AGI is Not That Important' },
+      { property: 'og:description', content: props.post.description },
+      { property: 'og:type', content: 'article' },
+      { property: 'og:url', content: props.post.url },
+      { property: 'og:image', content: props.post.cover },
+    ]
+  })
+}
 </script>
