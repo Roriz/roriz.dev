@@ -13,6 +13,12 @@
         <li><a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a></li>
         <li><a href="to:radames@roriz.dev"><i class="fa-solid fa-envelope" /></a></li>
       </ul>
+
+      <p v-if="orientation === 'vertical'" class="profile-description">
+        GenAI hype is real, but mainly for small and clearly defined problems.
+        The simpler and clearer the expected output, the more consistent the AI will be.
+        It's not as fancy as it sounds, but it completely changes the way we create value.
+      </p>
     </div>
   </section>
 </template>
@@ -85,6 +91,10 @@ defineProps({
 }
 .social-links a:hover {
   color: var(--tx-accent);
+}
+
+.profile-description {
+  margin-top: calc(var(--spacing) * 2);
 }
 
 @media (max-width: 768px) {
