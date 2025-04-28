@@ -9,6 +9,4 @@ export default defineNuxtConfig({
       whitespace: "preserve"
     }
   },
-
-  modules: ["@nuxt/image"]
 })

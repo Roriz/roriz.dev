@@ -13,11 +13,11 @@
 
     <main>
       <transition name="fade" mode="out-in">
-        <component 
-          v-if="post.component" 
-          :is="post.component" 
-          :post="post" 
-          class="post" 
+        <component
+          v-if="post.component"
+          :is="post.component"
+          :post="post"
+          class="post"
         />
         <div v-else class="post-placeholder">
           <p>This post is still a work in progress. Check back soon!</p>
@@ -104,6 +104,7 @@ const post = computed(() => {
 
 .post p {
   margin: var(--spacing) 0;
+  width: 100%;
 }
 .post p strong, .post p b, .post li strong {
   font-weight: bold;
@@ -129,7 +130,7 @@ const post = computed(() => {
   max-width: 70%;
   height: auto;
   margin: var(--spacing) auto;
-} 
+}
 
 .post section {
   max-width: 100%;
@@ -146,10 +147,10 @@ const post = computed(() => {
 
 .post em {
   font-style: italic;
-  width: 90%;
   display: block;
   margin: var(--spacing) auto;
   font-size: .9rem;
+  text-align: center;
 }
 
 @media (max-width: 768px) {

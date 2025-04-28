@@ -1,10 +1,11 @@
 import { defineAsyncComponent } from 'vue';
 
 export const ALL_POSTS = {
-  'ai-reshaped-software-2': {
-    title: 'WIP - AI reshaped software: Part 2',
-    slug: 'ai-reshaped-software-2',
-    createdAt: '2025-01-XX',
+  'scaling_genAI_by_engineer_vision': {
+    title: 'Scaling GenAI by Engineer Vision',
+    slug: 'scaling_genAI_by_engineer_vision',
+    createdAt: '2025-04-27',
+    component: defineAsyncComponent(() => import('@/components/posts/scaling_genAI_by_engineer_vision.vue'))
   },
   'ai_hype_is_real_but_for_the_wrong_reason': {
     title: 'AI hype is real, but for the wrong reason',
