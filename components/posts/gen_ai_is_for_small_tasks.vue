@@ -4,6 +4,8 @@
     <span>{{ post.title }}</span>
   </div>
   <section v-else class="post">
+    <iframe width="100%" height="100" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/2114921487&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/thezzz-1" title="TheZzZ" target="_blank" style="color: #cccccc; text-decoration: none;">TheZzZ</a> · <a href="https://soundcloud.com/thezzz-1/genai-is-for-small-tasks-not-fully-autonomous-systems" title="GenAI is for small tasks, not fully autonomous systems" target="_blank" style="color: #cccccc; text-decoration: none;">GenAI is for small tasks, not fully autonomous systems</a></div>
+
     <blockquote class="tldr">
       <p><strong>TLDR:</strong> Stop trying to build fully autonomous agents with GenAI. The current state of the technology excels at executing small, well-defined, and isolated tasks, not at handling the complexity of large, open-ended problems. The path to leveraging GenAI effectively is to think like a software builder: break down large challenges into a series of smaller, predictable functions that can be powered by a model. The real power isn't in a single, all-knowing AI, but in the software that orchestrates these small, intelligent steps.</p>
     </blockquote>
