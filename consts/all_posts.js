@@ -7,7 +7,7 @@ export const ALL_POSTS = {
     createdAt: '2025-06-17',
     component: defineAsyncComponent(() => import('@/components/posts/gen_ai_is_for_small_tasks.vue'))
   },
-  'scaling_genA_by_engineer_vision': {
+  'scaling_genAI_by_engineer_vision': {
     title: 'Scaling GenAI by Engineer Vision',
     slug: 'scaling_genAI_by_engineer_vision',
     createdAt: '2025-04-27',

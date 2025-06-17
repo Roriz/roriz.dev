@@ -9,6 +9,11 @@
     </blockquote>
 
     <p>As software builders, we've learned a fundamental lesson over the decades: complexity is the enemy. We build robust systems creating right sizeservices breaking problems down into smaller, testable, and maintainable parts. Yet, in the rush to adopt Generative AI, we seem to be forgetting this principle. The hype around autonomous agents and AGI is pushing us toward building complex, unpredictable systems that are doomed to fail.</p>
+
+    <NuxtLink to="/post/agi-is-not-that-important" class="back-link">
+      Read more about why AGI is not that important
+    </NuxtLink>
+
     <p>My argument is simple: the most effective way to use GenAI today is to stop thinking big and start thinking small, by focusing on the smallest, clearest tasks possible. We should treat LLMs not as autonomous thinkers, but as powerful tools for task execution, similar to a specialized tool or a highly capable junior assistant: brilliant at executing well-defined tasks but needing clear, precise instructions to avoid going off the rails.</p>
     <p>This isn't just a hunch; it's a conclusion supported by both practical experience and academic research. A recent paper from Apple researchers, <a href="https://ml-site.cdn-apple.com/papers/the-illusion-of-thinking.pdf" target="_blank">"The Illusion of Thinking"</a> or the hardest benchmarks like <a href="https://epoch.ai/data/ai-benchmarking-dashboard" target="_blank">FrontierMath</a>, reinforces this idea perfectly. Looks like there is a limit of resolve complex and opened taks. This limitation is fundamental. Just as even a human genius cannot solve every problem monolithically, we shouldn't expect an LLM to do so. The only viable path forward is to split the problem, the model, or both.</p>
     <img src="assets/posts/gen_ai_is_for_small_tasks-1.optimized.webp" alt="Benchmarking FrontierMath">

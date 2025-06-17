@@ -51,7 +51,7 @@ const route = useRoute();
 const slug = ref(route.params.slug);
 
 const post = computed(() => {
-  return ALL_POSTS[slug.value] || ALL_POSTS['my-first-post'];
+  return ALL_POSTS[slug.value] || Object.values(ALL_POSTS)[0];
 });
 </script>
 
