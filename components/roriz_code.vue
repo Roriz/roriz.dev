@@ -14,9 +14,9 @@ const code = ref(null);
 const maxWidth = ref(0);
 
 function resizeCodeTag() {
-  maxWidth.value = window.innerWidth - 64; // padding
+  maxWidth.value = Math.min(window.innerWidth - 64, 780); // padding
   if (window.innerWidth > 769) {
-    maxWidth.value = window.innerWidth - 528; // sidebar width + padding
+    maxWidth.value = Math.min(window.innerWidth - 528, 780); // sidebar width + padding
   }
 }
 

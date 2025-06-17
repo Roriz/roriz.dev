@@ -112,8 +112,6 @@
 
     <p><strong>Application:</strong> Remember that LLMs operate on tokens. Minor changes to input text can drastically alter output. Research (like Apple's 2023 paper on LLM robustness) shows that simple modifications like using synonyms or rephrasing questions (e.g., passive voice) can significantly impact performance on standardized tests.</p>
 
-    <img src="assets/posts/scaling_genAI_by_engineer_vision_06.optimized.webp" alt="Illustration showing how small input changes affect LLM outputs" />
-
     <p><em>Illustration showing how small input changes affect LLM outputs</em></p>
 
     <p>This sensitivity poses a production challenge. Mitigate it by applying controlled variations to your benchmark tests. Take existing test inputs and automatically generate variations: change the tone, rephrase sentences, substitute synonyms, while preserving the core meaning.</p>
@@ -209,7 +207,7 @@
 
     <p>This layered strategy is the philosophy behind <a href="https://github.com/Roriz/active_genie">ActiveGenie</a>, an open-source project I'm building to streamline LLM integration, aiming to be like a "lodash for LLMs" by providing reusable components for these common challenges, allowing teams to focus more on business value. Exploring projects like <a href="https://github.com/Roriz/active_genie">ActiveGenie</a> can offer practical insights into implementing these concepts.</p>
 
-    <img src="assets/posts/scaling_genAI_by_engineer_vision_10.optimized.webp" alt="ActiveGenie, the lodash for LLMs" />
+    <img src="assets/posts/active_genie.optimized.webp" alt="ActiveGenie, the lodash for LLMs" />
     <p><em>ActiveGenie, the lodash for LLMs</em></p>
 
     <p>Ultimately, when releasing new versions of GenAI features, we may never achieve the deterministic precision of traditional code coverage metrics. However, by systematically applying these techniques, we can generate a quantifiable <strong>confidence value</strong> an assessment of whether a new release is likely better, worse, or inconclusive compared to the previous one. This iterative improvement, is a powerful approach for navigating the evolving world of Generative AI.</p>
