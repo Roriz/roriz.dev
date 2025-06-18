@@ -6,20 +6,21 @@
           <ul>
             <!-- <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li> -->
             <li><NuxtLink to="/posts"><i class="fa fa-pencil-alt"></i> Blog</NuxtLink></li>
+            <li><NuxtLink to="/active-genie"><i class="fa fa-oil-can"></i> ActiveGenie</NuxtLink></li>
             <li><NuxtLink to="/about"><i class="fa fa-user"></i> About</NuxtLink></li>
           </ul>
         </nav>
       </aside>
-  
+
       <Profile class="profile" />
     </section>
-  
+
     <section class="content">
       <transition name="fade" mode="out-in">
         <NuxtPage />
       </transition>
     </section>
-  
+
     <button class="custom-fab" @click="isOpened = !isOpened">
       <i class="fa fa-bars"></i>
     </button>
@@ -219,7 +220,7 @@ onMounted(() => {
 }
 
 .content {
-  padding: calc(var(--spacing) * 4);
+  padding: calc(var(--spacing) * 4) calc(var(--spacing) * 2);
   width: 100%;
   min-height: 100vh;
   max-width: 100vw;

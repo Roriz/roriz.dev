@@ -59,7 +59,7 @@ h1 {
   overflow: hidden;
   white-space: nowrap;
   border-bottom: 1px solid var(--bg-tertiary);
-  padding: calc(var(--spacing) * 2);
+  padding: calc(var(--spacing) * 2) 0;
 }
 
 .posts li.wip a {
@@ -74,6 +74,10 @@ h1 {
 .posts li a span {
   font-size: 1.25rem;
   font-weight: 700;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .posts li a time {

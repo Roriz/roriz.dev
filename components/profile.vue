@@ -18,6 +18,7 @@
         GenAI hype is real, but mainly for small and clearly defined problems.
         The simpler and clearer the expected output, the more consistent the AI will be.
         It's not as fancy as it sounds, but it completely changes the way we create value.
+        See more <NuxtLink to="/active-genie">here</NuxtLink>.
       </p>
     </div>
   </section>

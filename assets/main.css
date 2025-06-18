@@ -40,7 +40,7 @@ body {
   min-height: 100vh;
 }
 
-a { 
+a {
   color: var(--tx-accent);
   text-decoration: none;
 }

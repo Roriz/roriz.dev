@@ -22,12 +22,16 @@ const props = defineProps({
   except: {
     type: String,
     default: ''
+  },
+  recommendationQuantity: {
+    type: Number,
+    default: 10
   }
 });
 
 const recommendedPosts = computed(() => {
   const publishedExceptCurrent = Object.values(PUBLISHABLE_POSTS).filter(post => props.except !== post.slug);
-  return Object.values(publishedExceptCurrent).slice(0, 3);
+  return Object.values(publishedExceptCurrent).slice(0, props.recommendationQuantity);
 });
 </script>
 
@@ -42,23 +46,26 @@ const recommendedPosts = computed(() => {
 }
 
 .recommendations__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  display: flex;
   gap: var(--spacing);
   width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  padding-bottom: calc(var(--spacing) * 2);
 }
+
 .recommended__card {
   display: flex;
   flex-direction: column;
-  padding: var(--spacing);
+  padding: calc(var(--spacing) * 2);
   border-radius: 4px;
   background-color: var(--bg-tertiary);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  max-width: 30%;
-  min-width: 150px;
+  min-width: 100px;
+  max-width: 250px;
+  flex: 0 0 auto;
   text-decoration: none;
   color: var(--tx-primary);
-  /* align-items: space-between; */
 }
 
 .post-preview {
@@ -70,7 +77,8 @@ const recommendedPosts = computed(() => {
 
 .post-preview img {
   margin: auto;
-  max-width: 130px;
+  max-width: 100%;
+  max-height: 120px;
 }
 
 .post-preview span {
@@ -79,6 +87,6 @@ const recommendedPosts = computed(() => {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-top: auto;
+  margin-top: calc(var(--spacing) * 2);
 }
 </style>

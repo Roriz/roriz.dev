@@ -86,7 +86,7 @@ puts result  # {"winner"=&gt;"Business Growth Plan", "reasoning"=&gt; "While Tea
     <p>With a list of expectations, clear input and output, GenAI could potentially replace the human in the loop partially or even totally in that specific task. This could involve creating summaries, simulating another department's perspective, debating ideas, or ranking content based on nuanced criteria. The goal isn't to build a massive agent that replaces an entire recruiting or legal department, but to use GenAI to resolve or assist with a very specific, isolated task within their workflow.</p>
     <p>These new capabilities are powerful. While automating tasks that feed into a human workflow is valuable, the real gold mine is system-to-system integration. True value is unlocked when one AI-powered component can feed structured, reliable output directly into the next automated process, creating a chain of value. The complex, emergent value that arises from chaining these small, intelligent tasks is where the next wave of innovation lies.</p>
 
-    <img src="assets/posts/active_genie.optimized.webp" alt="ActiveGenie, the lodash for LLMs" />
+    <img src="assets/active_genie.optimized.webp" alt="ActiveGenie, the lodash for LLMs" />
     <p><em>ActiveGenie, the lodash for LLMs</em></p>
     <p>ActiveGenie is a project I'm building to streamline LLM integration, aiming to be like a "lodash for LLMs" by providing reusable components for these common challenges, allowing teams to focus more on business value. Exploring projects like <a href="https://github.com/Roriz/active_genie">ActiveGenie</a> can offer practical insights into implementing these concepts.</p>
   </section>
