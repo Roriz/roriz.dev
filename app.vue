@@ -215,7 +215,7 @@ onMounted(() => {
   }
 
   .content {
-    max-width: calc(100vw - 400px);
+    max-width: calc(100vw - 400px) !important;
   }
 }
 

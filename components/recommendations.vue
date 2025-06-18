@@ -2,16 +2,16 @@
   <section class="recommendations">
     <h2>Recommended Posts</h2>
 
-    <div class="recommendations__grid">
-      <NuxtLink
-        v-for="post in recommendedPosts"
-        :key="post.slug"
-        class="recommended__card"
-        :to="{ name: 'post-slug', params: { slug: post.slug } }"
-      >
-        <component :is="post.component" :post="post" is-preview/>
-      </NuxtLink>
-    </div>
+    <ul class="recommendations__grid">
+      <li v-for="post in recommendedPosts" :key="post.slug">
+        <NuxtLink
+          class="recommended__card"
+          :to="{ name: 'post-slug', params: { slug: post.slug } }"
+        >
+          <component :is="post.component" :post="post" is-preview/>
+        </NuxtLink>
+      </li>
+    </ul>
   </section>
 </template>
 
@@ -42,16 +42,18 @@ const recommendedPosts = computed(() => {
   gap: var(--spacing);
   width: 100%;
   margin-top: var(--spacing);
-  align-items: flex-start !important;
+  align-items: flex-start;
 }
 
 .recommendations__grid {
   display: flex;
+  flex-direction: row;
   gap: var(--spacing);
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   white-space: nowrap;
   padding-bottom: calc(var(--spacing) * 2);
+  list-style: none;
 }
 
 .recommended__card {
