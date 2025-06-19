@@ -117,7 +117,7 @@ onMounted(() => {
 
 .sidebar {
   min-width: 300px;
-  max-width: 300px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -139,7 +139,7 @@ onMounted(() => {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
   border-bottom: 1px solid var(--bg-tertiary);
   font-size: 0.6rem;
   text-transform: uppercase;
@@ -150,7 +150,7 @@ onMounted(() => {
 }
 .sidebar nav ul li a svg {
   font-size: 1.5rem;
-  margin-bottom: calc(var(--spacing) * 1);
+  margin-right: calc(var(--spacing) * 3);
 }
 
 .intro {
@@ -202,6 +202,12 @@ onMounted(() => {
   }
   .sidebar nav ul li a {
     justify-content: flex-start;
+    flex-direction: column;
+  }
+  .sidebar nav ul li a svg {
+    font-size: 1.5rem;
+    margin-bottom: calc(var(--spacing) * 1);
+    margin-right: 0;
   }
 
   .profile {
