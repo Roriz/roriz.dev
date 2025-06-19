@@ -6,6 +6,7 @@
           <ul>
             <!-- <li><NuxtLink to="/"><i class="fa fa-home"></i> Home</NuxtLink></li> -->
             <li><NuxtLink to="/posts"><i class="fa fa-pencil-alt"></i> Blog</NuxtLink></li>
+            <li><NuxtLink to="/conferences"><i class="fa fa-microphone-lines"></i> Speaker</NuxtLink></li>
             <li><NuxtLink to="/active-genie"><i class="fa fa-oil-can"></i> ActiveGenie</NuxtLink></li>
             <li><NuxtLink to="/about"><i class="fa fa-user"></i> About</NuxtLink></li>
           </ul>
@@ -72,7 +73,7 @@ useHead({
     { name: 'og:description', content: 'Radamés Roriz - Software builder' },
     { name: 'og:type', content: 'website' },
     { name: 'og:url', content: 'https://roriz.dev' },
-    { name: 'og:image', content: 'https://roriz.dev/assets/radames_roriz.optimized.jpg' },
+    { name: 'og:image', content: 'https://roriz.dev/assets/radames_roriz.optimized.webp' },
     { name: 'og:site_name', content: 'Radamés Roriz' },
     { name: 'og:locale', content: 'en_US' },
     { name: 'og:image:width', content: '1200' },

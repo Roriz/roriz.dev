@@ -1,12 +1,12 @@
 <template>
   <section class="profile" :class="orientation">
     <div class="avatar">
-      <img src="assets/radames_roriz.optimized.jpg" alt="Avatar">
+      <img src="assets/radames_roriz.optimized.webp" alt="Avatar">
     </div>
 
     <div class="profile-info">
       <h1>Radamés Roriz</h1>
-      <p>Software builder</p>
+      <p>Software builder & Speaker</p>
 
       <ul class="social-links">
         <li><a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a></li>
