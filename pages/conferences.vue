@@ -85,6 +85,7 @@
 import tropical_on_rails from 'assets/events/2025-04-04_tropical_on_rails.optimized.webp'
 import tropical_ruby from 'assets/events/2024-04-04_tropical.rb.optimized.webp'
 import agro1 from 'assets/events/2025-05-04_agro1.optimized.webp'
+import guruSP from 'assets/events/2025-09-03_guru-sp.optimized.webp'
 import rubySummit from 'assets/events/2020-12-04_ruby_summit.optimized.webp'
 
 const navigateToEvent = (event) => {
@@ -95,6 +96,17 @@ const navigateToEvent = (event) => {
 }
 
 const events = [
+  {
+    title: 'Guru-SP 71º',
+    date: 'September 03, 2025',
+    location: 'São Paulo, Brazil',
+    description: 'Presented on "The secret for consistent AI feature: ActiveGenie" to an audience of 40+ developers.',
+    coverImage: guruSP,
+    links: [
+      { text: 'Slides', url: 'https://speakerdeck.com/roriz/the-secret-to-consistent-genai-activegenie-bc800f7d-4477-4690-8f4f-a9f549a04843', icon: 'fa fa-file-powerpoint' },
+      { text: 'Video', url: 'https://www.youtube.com/watch?v=qDuwcGm9C6w', icon: 'fa fa-play-circle' }
+    ],
+  },
   {
     title: 'Techxperience',
     date: 'June 04, 2025',
