@@ -1,12 +1,12 @@
 {
-  "name": "nuxt-app",
+  "name": "roriz.dev",
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
+    "dev": "npx nuxt dev",
+    "generate": "npx nuxt generate",
+    "preview": "npx nuxt preview",
+    "postinstall": "npx nuxt prepare",
     "outdated": "npm outdated"
   },
   "dependencies": {

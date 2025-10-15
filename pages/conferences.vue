@@ -98,7 +98,7 @@ const navigateToEvent = (event) => {
 const events = [
   {
     title: 'Guru-SP 71º',
-    date: 'September 03, 2025',
+    date: 'September 13, 2025',
     location: 'São Paulo, Brazil',
     description: 'Presented on "The secret for consistent AI feature: ActiveGenie" to an audience of 40+ developers.',
     coverImage: guruSP,

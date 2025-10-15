@@ -7,7 +7,8 @@ RUN apt-get update && \
         imagemagick \
         webp \
         findutils \
-        coreutils
+        coreutils \
+        ffmpeg
 
 
 # Set working directory

@@ -23,10 +23,10 @@
             Modules with clear intention, with simple and consistent interfaces.
           </p>
           <ul class="features__list">
-            <li class="features__list-item">ActiveGenie::DataExtractor - Extract data from text</li>
-            <li class="features__list-item">ActiveGenie::Battle - Debate-style comparison</li>
-            <li class="features__list-item">ActiveGenie::Scoring - School-grade-style rating</li>
-            <li class="features__list-item">ActiveGenie::Ranking - Scoring + Battle + Elo rating system</li>
+            <li class="features__list-item"><b>ActiveGenie::Extractor</b> - Typed data from unstructured text</li>
+            <li class="features__list-item"><b>ActiveGenie::Comparator</b> - Compare two items and choose the best</li>
+            <li class="features__list-item"><b>ActiveGenie::Scorer</b> - Given a text, return a score from 0 to 100</li>
+            <li class="features__list-item"><b>ActiveGenie::Ranker</b> - Given a list, return ranked items</li>
           </ul>
         </div>
       </div>
@@ -38,13 +38,12 @@
         Support this open-source project! Star us on GitHub or contribute to help us grow.
       </p>
       <a
-        href="https://github.com/roriz/active_genie"
+        href="https://activegenie.ai/"
         target="_blank"
-        rel="noopener noreferrer"
         class="button"
       >
-        <i class="fa-brands fa-github" aria-hidden="true"></i>
-        View on GitHub & Star Us!
+        <i class="fa fa-oil-can" aria-hidden="true"></i>
+        Quick Start
       </a>
     </section>
 
@@ -53,12 +52,12 @@
       <div class="stats__grid">
         <div class="stat-card">
           <h3 class="stat-card__title">GitHub Stars <i class="fa fa-star" aria-hidden="true"></i></h3>
-          <p class="stat-card__value stat-card__value--stars" id="github-stars">80+</p>
+          <p class="stat-card__value stat-card__value--stars" id="github-stars">155+</p>
           <p class="stat-card__description">Help us reach more developers!</p>
         </div>
         <div class="stat-card">
           <h3 class="stat-card__title">Gem Downloads <i class="fa fa-gem" aria-hidden="true"></i></h3>
-          <p class="stat-card__value stat-card__value--downloads" id="gem-downloads">3000+</p>
+          <p class="stat-card__value stat-card__value--downloads" id="gem-downloads">6300+</p>
           <p class="stat-card__description">Join thousands of happy users!</p>
         </div>
       </div>
