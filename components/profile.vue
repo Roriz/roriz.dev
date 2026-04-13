@@ -6,7 +6,7 @@
 
     <div class="profile-info">
       <h1>Radamés Roriz</h1>
-      <p>Software builder & Speaker</p>
+      <p>Staff Software Engineer</p>
 
       <ul class="social-links">
         <li><a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a></li>

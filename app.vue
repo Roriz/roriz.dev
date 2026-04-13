@@ -53,9 +53,9 @@ onClickOutside(mainContent, () => {
 })
 
 useHead({
-  title: 'Radamés Roriz - Software builder',
+  title: 'Radamés Roriz - Staff Software Engineer',
   meta: [
-    { name: 'description', content: 'Radamés Roriz - Software builder' },
+    { name: 'description', content: 'Radamés Roriz - Staff Software Engineer' },
     { name: 'author', content: 'Radamés Roriz' },
     { name: 'keywords', content: 'software, developer, engineer' },
     { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -69,8 +69,8 @@ useHead({
     { name: 'google', content: 'max-snippet:-1' },
     { name: 'google', content: 'max-image-preview:large' },
     { name: 'google', content: 'max-video-preview:-1' },
-    { name: 'og:title', content: 'Radamés Roriz - Software builder' },
-    { name: 'og:description', content: 'Radamés Roriz - Software builder' },
+    { name: 'og:title', content: 'Radamés Roriz - Staff Software Engineer' },
+    { name: 'og:description', content: 'Radamés Roriz - Staff Software Engineer' },
     { name: 'og:type', content: 'website' },
     { name: 'og:url', content: 'https://roriz.dev' },
     { name: 'og:image', content: 'https://roriz.dev/assets/radames_roriz.optimized.webp' },
