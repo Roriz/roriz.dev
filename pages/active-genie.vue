@@ -57,7 +57,7 @@
         </div>
         <div class="stat-card">
           <h3 class="stat-card__title">Gem Downloads <i class="fa fa-gem" aria-hidden="true"></i></h3>
-          <p class="stat-card__value stat-card__value--downloads" id="gem-downloads">6300+</p>
+          <p class="stat-card__value stat-card__value--downloads" id="gem-downloads">1200+</p>
           <p class="stat-card__description">Join thousands of happy users!</p>
         </div>
       </div>

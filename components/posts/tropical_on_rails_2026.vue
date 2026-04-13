@@ -29,7 +29,7 @@
     </ul>
 
     <img src="assets/posts/tropical_on_rails_2026_serradura.optimized.jpeg" alt="Diagrama da Evolução da Arquitetura do Serradura" />
-    <p><em>Diagrama da evolução da arquitetura e métricas de qualidade.</em></p>
+    <p><em class="caption">Diagrama da evolução da arquitetura e métricas de qualidade.</em></p>
 
     <p>Trazer essa disciplina e limites restritos para qualquer linguagem aumenta imensamente a eficácia da IA para a empresa a longo prazo.</p>
     <p><blockquote>Mais detalhes da visão do Serradura em seu projeto: <a href="https://github.com/railswhey/app">railswhey/app</a></blockquote></p>
@@ -42,12 +42,12 @@
     <p>Para o Akita, o ápice da quebra de paradigma veio no slide em que exibiu o painel de projetos de sua "maratona" de 2 meses: 8 projetos construídos e entregues em tempo recorde utilizando IA.</p>
 
     <img src="assets/posts/tropical_on_rails_2026_akita_1.optimized.jpeg" alt="Slide dos 8 Projetos em 2 Meses do Akita" />
-    <p><em>Oito projetos entregues em tempo recorde com auxílio de IA.</em></p>
+    <p><em class="caption">Oito projetos entregues em tempo recorde com auxílio de IA.</em></p>
 
     <p>Como isso é possível? Ele explicou em outro momento focado em <strong>"aceitar a imperfeição"</strong>. Quando o custo de gerar código cai drasticamente graças aos agentes, errar passa a ser barato. Múltiplos exemplos práticos deixaram claro que a iteração ganha tanta velocidade que consertar falhas não gera o gargalo do passado, pavimentando o caminho perfeito para entregas insanamente rápidas e contínuas.</p>
 
     <img src="assets/posts/tropical_on_rails_2026_akita_2.optimized.jpeg" alt="Slide Aceitando a Imperfeição do Akita" />
-    <p><em>Aceitando a imperfeição: a velocidade de correção supera o custo do erro.</em></p>
+    <p><em class="caption">Aceitando a imperfeição: a velocidade de correção supera o custo do erro.</em></p>
 
     <p><blockquote>Mais detalhes sobre o "Akita way": <a href="https://akitaonrails.com/en/2026/04/11/vs-code-is-the-new-punch-card/">VS Code is the new punch card</a></blockquote></p>
 
@@ -102,3 +102,20 @@ if (!props.isPreview) {
   })
 }
 </script>
+<style scoped>
+.post em {
+  display: inline;
+  margin: 0;
+  text-align: inherit;
+  font-size: inherit;
+  font-style: italic;
+}
+
+.post em.caption {
+  display: block;
+  text-align: center;
+  margin: var(--spacing) auto;
+  font-size: 0.9rem;
+  color: var(--tx-secondary);
+}
+</style>
