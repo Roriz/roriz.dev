@@ -14,8 +14,8 @@ do
 
   image_size=$(stat -c %s $image)
   image_without_file_extension=$(echo $image | cut -d'.' -f1)
-  output_image="$image_without_file_extension.optimized.webp"
-  convert "$image" -strip -interlace Plane -gaussian-blur 0.05 -quality 85% -define webp:method=6 $output_image
+  output_image="$image_without_file_extension.optimized.jpeg"
+  convert "$image" -strip -interlace Plane -gaussian-blur 0.05 -quality 85% -define jpeg $output_image
 
   echo "Optimizing $image from $(($image_size / 1024)) KB to $(($(stat -c %s $output_image) / 1024)) KB"
   rm $image

@@ -1,6 +1,12 @@
 import { defineAsyncComponent } from 'vue';
 
 export const ALL_POSTS = {
+  'tropical_on_rails_2026': {
+    title: 'Tropical on Rails 2026',
+    slug: 'tropical_on_rails_2026',
+    createdAt: '2026-04-12',
+    component: defineAsyncComponent(() => import('@/components/posts/tropical_on_rails_2026.vue'))
+  },
   'gen_ai_is_for_small_tasks': {
     title: 'GenAI is for small tasks, not fully autonomous systems',
     slug: 'gen_ai_is_for_small_tasks',
@@ -30,26 +36,6 @@ export const ALL_POSTS = {
     slug: 'agi-is-not-that-important',
     createdAt: '2024-12-13',
     component: defineAsyncComponent(() => import('@/components/posts/agi_is_not_that_important.vue'))
-  },
-  'we-need-less-layers-not-more': {
-    title: 'WIP - we need less layers, not more WIP',
-    slug: 'we-need-less-layers-not-more',
-    createdAt: '2024-04-05',
-  },
-  'services-topology': {
-    title: 'WIP - Services topology WIP',
-    slug: 'services-topology',
-    createdAt: '2024-01-XX',
-  },
-  'scaling-local-envoriment-by-ruby-cli': {
-    title: 'WIP - Scaling local envoriment by ruby cli WIP',
-    slug: 'scaling-local-envoriment-by-ruby-cli',
-    createdAt: '2022-08-05',
-  },
-  'i18n-for-large-systems': {
-    title: 'WIP - I18n for large systems WIP',
-    slug: 'i18n-for-large-systems',
-    createdAt: '2021-10-27',
   },
 }
 
