@@ -11,7 +11,7 @@
       <ul class="social-links">
         <li><a href="https://www.linkedin.com/in/radames-roriz/"><i class="fa-brands fa-linkedin" /></a></li>
         <li><a href="https://github.com/roriz"><i class="fa-brands fa-github" /></a></li>
-        <li><a href="to:radames@roriz.dev"><i class="fa-solid fa-envelope" /></a></li>
+        <li><a href="to:radames.roriz@gmail.com"><i class="fa-solid fa-envelope" /></a></li>
       </ul>
 
       <p v-if="orientation === 'vertical'" class="profile-description">

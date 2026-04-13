@@ -12,7 +12,7 @@
 
     <section class="cta">
       <a
-        href="mailto:radames@roriz.dev"
+        href="mailto:radames.roriz@gmail.com"
         class="button"
       >
         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -71,7 +71,7 @@
         Interested in having me speak at your event? I'd love to be part of it!
       </p>
       <a
-        href="mailto:radames@roriz.dev"
+        href="mailto:radames.roriz@gmail.com"
         class="button"
       >
         <i class="fa fa-envelope" aria-hidden="true"></i>
